@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { ArrowUp, ExternalLink, Globe } from 'lucide-react';
+import sitaLogo from '@/assets/logos/sita-logo.png';
 
 const usefulLinks = [
   { label: 'sitamarhi.nic.in', href: 'https://sitamarhi.nic.in' },
@@ -37,7 +38,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/assets/hero/sita-logo.png"
+                src={sitaLogo}
                 alt="Maa Sita Logo"
                 className="w-10 h-10 object-cover rounded-full border border-devotional-gold shrink-0"
               />
