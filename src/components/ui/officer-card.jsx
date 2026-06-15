@@ -8,15 +8,13 @@ export default function OfficerCard({ officer, index }) {
   const hasPhone = officer.phone && officer.phone !== 'Available on official portal';
   const hasEmail = officer.email && officer.email !== 'Available on official portal';
 
-  const cardStyle = 'from-category-services-start to-category-services-end border-category-services-border';
-
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.55, delay: index * 0.08, ease: 'easeOut' }}
-      className={`group bg-gradient-to-br ${cardStyle} rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border`}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
+      className="premium-card p-0 flex flex-col group h-full overflow-hidden"
     >
       <div className="bg-white/40 border-b border-white p-6 relative overflow-hidden flex flex-col items-center text-center">
         <div className="absolute top-0 right-0 w-28 h-28 bg-white/5 rounded-full -translate-y-10 translate-x-10" />

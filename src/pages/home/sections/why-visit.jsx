@@ -61,10 +61,10 @@ function ReasonCard({ reason, index }) {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.12, ease: 'easeOut' }}
-      className={`group bg-gradient-to-br ${reason.cardGradient} border ${reason.border} ${reason.hoverBorder} rounded-3xl p-7 hover:shadow-xl transition-all duration-400 hover:-translate-y-1.5 flex flex-col relative overflow-hidden`}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
+      className="premium-card p-7 flex flex-col relative overflow-hidden group h-full"
     >
       <div className={`absolute -top-8 -right-8 w-28 h-28 bg-gradient-to-br ${reason.gradient} opacity-10 rounded-full group-hover:opacity-20 transition-opacity`} />
       <div className={`w-14 h-14 bg-gradient-to-br ${reason.gradient} rounded-2xl flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform duration-300`}>

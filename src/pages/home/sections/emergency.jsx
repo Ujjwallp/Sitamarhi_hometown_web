@@ -92,11 +92,11 @@ function ContactCard({ contact }) {
   };
 
   return (
-    <div className={`group bg-gradient-to-br ${contact.cardGradient} border-l-4 ${contact.borderAccent} border border-r-black/5 border-t-black/5 border-b-black/5 rounded-3xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4 shadow-sm relative overflow-hidden`}>
-      <div className={`absolute -top-8 -right-8 w-28 h-28 bg-gradient-to-br ${contact.gradient} opacity-10 rounded-full group-hover:opacity-20 transition-opacity`} />
+    <div className={`premium-card p-6 flex flex-col gap-4 relative overflow-hidden group border-l-4 border-l-red-500`}>
+      <div className={`absolute -top-8 -right-8 w-28 h-28 bg-gradient-to-br from-red-500 to-rose-600 opacity-5 rounded-full group-hover:opacity-10 transition-opacity`} />
       
       <div className="flex items-center gap-3 relative z-10">
-        <div className={`w-12 h-12 bg-gradient-to-br ${contact.gradient} rounded-xl flex items-center justify-center shadow-md shrink-0 group-hover:scale-105 transition-transform duration-300`}>
+        <div className={`w-12 h-12 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center shadow-md shrink-0 group-hover:scale-105 transition-transform duration-300`}>
           <Icon className="w-6 h-6 text-white" />
         </div>
         <div>
@@ -104,8 +104,8 @@ function ContactCard({ contact }) {
           <p className={`text-[10px] font-bold uppercase tracking-wider ${contact.textColor} mt-0.5`}>{contact.shortDesc}</p>
         </div>
       </div>
-      <div className="bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 border border-devotional-gold/10 shadow-sm flex items-center justify-between relative z-10">
-        <p className={`text-xl font-extrabold bg-gradient-to-r ${contact.gradient} bg-clip-text text-transparent tracking-wide`}>{contact.number}</p>
+      <div className="bg-slate-50/50 rounded-xl px-4 py-3 border border-stone-200 shadow-sm flex items-center justify-between relative z-10">
+        <p className={`text-xl font-extrabold text-red-600 tracking-wide`}>{contact.number}</p>
         <button
           onClick={handleCopy}
           className="p-1.5 hover:bg-stone-100 rounded-lg text-stone-400 hover:text-stone-600 transition-colors"
@@ -125,7 +125,7 @@ function ContactCard({ contact }) {
       <div className="mt-auto relative z-10">
         <a
           href={`tel:${contact.number}`}
-          className={`w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r ${contact.gradient} px-4 py-2.5 rounded-xl text-white text-sm font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all`}
+          className={`w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-500 to-rose-600 px-4 py-2.5 rounded-xl text-white text-sm font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all`}
         >
           <Phone className="w-4 h-4" />
           Call Now

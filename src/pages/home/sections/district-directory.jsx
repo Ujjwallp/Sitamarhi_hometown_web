@@ -53,15 +53,13 @@ function DirectoryCard({ entry, index }) {
   const isPhonePublic = entry.phone && entry.phone !== 'Available on official district portal';
   const isEmailPublic = entry.email && entry.email !== 'Available on official district portal';
 
-  const cardStyle = 'from-category-services-start to-category-services-end border-category-services-border';
-
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.06, ease: 'easeOut' }}
-      className={`bg-gradient-to-br ${cardStyle} rounded-2xl border p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group`}
+      transition={{ duration: 0.5, delay: (index % 8) * 0.1, ease: 'easeOut' }}
+      className="premium-card p-6 flex flex-col h-full group"
     >
       <div>
         <div className="flex items-center gap-3.5 mb-5">

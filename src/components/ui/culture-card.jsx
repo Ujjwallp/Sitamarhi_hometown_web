@@ -6,15 +6,13 @@ export default function CultureCard({ item, index }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
-  const cardStyle = 'from-category-culture-start to-category-culture-end border-category-culture-border';
-
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.12, ease: 'easeOut' }}
-      className={`group bg-gradient-to-br ${cardStyle} rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border h-full`}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
+      className="premium-card flex flex-col group h-full overflow-hidden"
     >
       <div className="relative h-52 overflow-hidden">
         <img

@@ -23,7 +23,7 @@ export default function Hero() {
         }}
       />
       <div
-        className="absolute inset-0 bg-gradient-to-r from-[#FAF6ED]/90 via-[#FAF6ED]/70 to-transparent"
+        className="absolute inset-0 bg-gradient-to-r from-devotional-bg/95 via-devotional-bg/85 to-transparent"
       />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,12 +76,11 @@ export default function Hero() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl">
               {stats.map((stat, idx) => {
                 const icons = ['👥', '🏛️', '👥', '🏡'];
-                const cardStyle = 'from-category-info-start to-category-info-end border-category-info-border';
                 
                 return (
                   <div
                     key={stat.label}
-                    className={`bg-gradient-to-br ${cardStyle} border rounded-3xl p-4 text-center hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 shadow-md flex flex-col items-center justify-between`}
+                    className="premium-card p-4 text-center flex flex-col items-center justify-between"
                   >
                     <div className="text-devotional-gold text-lg mb-2 select-none">{icons[idx]}</div>
                     <div className="flex-grow flex flex-col justify-center">

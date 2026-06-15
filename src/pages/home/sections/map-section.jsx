@@ -300,8 +300,10 @@ export default function MapSection() {
             </button>
           ))}
         </motion.div>
-        <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
-          <div ref={containerRef} style={{ height: '520px', width: '100%' }} />
+        <div className="premium-card p-2 sm:p-4 mb-6 relative z-10">
+          <div className="rounded-2xl overflow-hidden shadow-inner border border-devotional-gold/20 relative z-10">
+            <div ref={containerRef} style={{ height: '520px', width: '100%' }} />
+          </div>
         </div>
         <div className="mt-6 flex flex-wrap gap-3 justify-center">
           {visibleLandmarks.map((place) => (

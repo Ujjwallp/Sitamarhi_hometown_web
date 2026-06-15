@@ -55,11 +55,10 @@ const stats = [
 
 function StatCard({ stat, index }) {
   const Icon = stat.icon;
-  const cardStyle = 'from-category-info-start to-category-info-end border-category-info-border';
 
   return (
     <div
-      className={`group bg-gradient-to-br ${cardStyle} rounded-3xl border p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4 relative overflow-hidden`}
+      className="premium-card p-6 flex flex-col gap-4 relative overflow-hidden group"
     >
       <div className="flex items-center justify-between relative">
         <div className={`p-3 ${stat.bgColor} rounded-xl`}>

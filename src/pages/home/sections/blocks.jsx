@@ -22,9 +22,9 @@ const blocks = [
 ];
 
 const SUBDIVISION_COLORS = {
-  Sitamarhi: { bg: 'bg-[#7A1F1F]', text: 'text-white', border: 'border-[#5a1515]', dot: 'bg-white', gradient: 'from-category-culture-start to-category-culture-end border-category-culture-border' },
-  Bairgania: { bg: 'bg-[#0F766E]', text: 'text-white', border: 'border-[#0a5c56]', dot: 'bg-white', gradient: 'from-category-services-start to-category-services-end border-category-services-border' },
-  Pupri:     { bg: 'bg-[#1E40AF]', text: 'text-white', border: 'border-[#1a358f]', dot: 'bg-white', gradient: 'from-category-info-start to-category-info-end border-category-info-border' },
+  Sitamarhi: { bg: 'bg-[#7A1F1F]', text: 'text-white', border: 'border-[#5a1515]', dot: 'bg-white' },
+  Bairgania: { bg: 'bg-[#0F766E]', text: 'text-white', border: 'border-[#0a5c56]', dot: 'bg-white' },
+  Pupri:     { bg: 'bg-[#1E40AF]', text: 'text-white', border: 'border-[#1a358f]', dot: 'bg-white' },
 };
 
 function BlockCard({ block, index }) {
@@ -35,10 +35,10 @@ function BlockCard({ block, index }) {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.45, delay: (index % 8) * 0.05, ease: 'easeOut' }}
-      className={`group bg-gradient-to-br ${colors.gradient} border rounded-2xl p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative overflow-hidden`}
+      transition={{ duration: 0.5, delay: (index % 8) * 0.05, ease: 'easeOut' }}
+      className="premium-card p-5 group relative overflow-hidden"
     >
       <div className="absolute top-3 right-3 w-7 h-7 bg-devotional-secondary/60 border border-devotional-gold/15 rounded-full flex items-center justify-center">
         <span className="text-xs font-bold text-devotional-maroon">{(index + 1).toString().padStart(2, '0')}</span>

@@ -6,22 +6,13 @@ export default function PlaceCard({ place, onLearnMore, index }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
-  const categoryMap = {
-    sacred: 'from-category-sacred-start to-category-sacred-end border-category-sacred-border',
-    heritage: 'from-category-heritage-start to-category-heritage-end border-category-heritage-border',
-    culture: 'from-category-culture-start to-category-culture-end border-category-culture-border',
-    info: 'from-category-info-start to-category-info-end border-category-info-border',
-    services: 'from-category-services-start to-category-services-end border-category-services-border',
-  };
-  const cardStyle = categoryMap[place.category] || categoryMap.sacred;
-
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
-      className={`group bg-gradient-to-br ${cardStyle} rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border`}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
+      className="premium-card flex flex-col group h-full overflow-hidden"
     >
       <div className="relative h-60 overflow-hidden">
         <img
