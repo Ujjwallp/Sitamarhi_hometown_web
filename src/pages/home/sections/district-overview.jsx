@@ -53,12 +53,21 @@ const stats = [
   },
 ];
 
-function StatCard({ stat }) {
+function StatCard({ stat, index }) {
   const Icon = stat.icon;
+  const gradients = [
+    'from-emerald-100 to-teal-200/80 border-teal-300/50',
+    'from-blue-100 to-indigo-200/80 border-indigo-300/50',
+    'from-orange-100 to-amber-200/80 border-amber-300/50',
+    'from-rose-100 to-pink-200/80 border-pink-300/50',
+    'from-violet-100 to-purple-200/80 border-purple-300/50',
+    'from-cyan-100 to-sky-200/80 border-sky-300/50',
+  ];
+  const cardStyle = gradients[index % gradients.length];
 
   return (
     <div
-      className={`group bg-gradient-to-br from-amber-50 via-orange-50 to-orange-100 rounded-3xl border border-devotional-gold/30 p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4 relative overflow-hidden`}
+      className={`group bg-gradient-to-br ${cardStyle} rounded-3xl border p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4 relative overflow-hidden`}
     >
       <div className="flex items-center justify-between relative">
         <div className={`p-3 ${stat.bgColor} rounded-xl`}>
@@ -119,8 +128,8 @@ export default function DistrictOverview() {
           </p>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {stats.map((stat) => (
-            <StatCard key={stat.label} stat={stat} />
+          {stats.map((stat, index) => (
+            <StatCard key={stat.label} stat={stat} index={index} />
           ))}
         </div>
       </div>
