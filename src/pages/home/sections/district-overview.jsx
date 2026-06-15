@@ -55,15 +55,7 @@ const stats = [
 
 function StatCard({ stat, index }) {
   const Icon = stat.icon;
-  const gradients = [
-    'from-emerald-100 to-teal-200/80 border-teal-300/50',
-    'from-blue-100 to-indigo-200/80 border-indigo-300/50',
-    'from-orange-100 to-amber-200/80 border-amber-300/50',
-    'from-rose-100 to-pink-200/80 border-pink-300/50',
-    'from-violet-100 to-purple-200/80 border-purple-300/50',
-    'from-cyan-100 to-sky-200/80 border-sky-300/50',
-  ];
-  const cardStyle = gradients[index % gradients.length];
+  const cardStyle = 'from-category-info-start to-category-info-end border-category-info-border';
 
   return (
     <div

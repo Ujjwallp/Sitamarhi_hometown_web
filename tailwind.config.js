@@ -11,6 +11,38 @@ export default {
           maroon: '#7A1F1F',
           text: '#1C120A',
         },
+        category: {
+          sacred: {
+            start: 'var(--color-sacred-start)',
+            end: 'var(--color-sacred-end)',
+            border: 'var(--color-sacred-border)',
+            accent: 'var(--color-sacred-accent)',
+          },
+          heritage: {
+            start: 'var(--color-heritage-start)',
+            end: 'var(--color-heritage-end)',
+            border: 'var(--color-heritage-border)',
+            accent: 'var(--color-heritage-accent)',
+          },
+          culture: {
+            start: 'var(--color-culture-start)',
+            end: 'var(--color-culture-end)',
+            border: 'var(--color-culture-border)',
+            accent: 'var(--color-culture-accent)',
+          },
+          info: {
+            start: 'var(--color-info-start)',
+            end: 'var(--color-info-end)',
+            border: 'var(--color-info-border)',
+            accent: 'var(--color-info-accent)',
+          },
+          services: {
+            start: 'var(--color-services-start)',
+            end: 'var(--color-services-end)',
+            border: 'var(--color-services-border)',
+            accent: 'var(--color-services-accent)',
+          },
+        },
         navy: {
           50: '#f0f4f8',
           100: '#d9e2ec',

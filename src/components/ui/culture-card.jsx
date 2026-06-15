@@ -6,13 +6,7 @@ export default function CultureCard({ item, index }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
-  const gradients = [
-    'from-rose-100 to-pink-200/80 border-pink-300/50',
-    'from-amber-100 to-orange-200/80 border-orange-300/50',
-    'from-emerald-100 to-teal-200/80 border-teal-300/50',
-    'from-violet-100 to-purple-200/80 border-purple-300/50',
-  ];
-  const cardStyle = gradients[index % gradients.length];
+  const cardStyle = 'from-category-culture-start to-category-culture-end border-category-culture-border';
 
   return (
     <motion.div

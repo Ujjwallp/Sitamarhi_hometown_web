@@ -6,13 +6,14 @@ export default function PlaceCard({ place, onLearnMore, index }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
-  const gradients = [
-    'from-amber-100 to-orange-200/80 border-orange-300/50',
-    'from-blue-100 to-indigo-200/80 border-indigo-300/50',
-    'from-emerald-100 to-teal-200/80 border-teal-300/50',
-    'from-rose-100 to-pink-200/80 border-pink-300/50',
-  ];
-  const cardStyle = gradients[index % gradients.length];
+  const categoryMap = {
+    sacred: 'from-category-sacred-start to-category-sacred-end border-category-sacred-border',
+    heritage: 'from-category-heritage-start to-category-heritage-end border-category-heritage-border',
+    culture: 'from-category-culture-start to-category-culture-end border-category-culture-border',
+    info: 'from-category-info-start to-category-info-end border-category-info-border',
+    services: 'from-category-services-start to-category-services-end border-category-services-border',
+  };
+  const cardStyle = categoryMap[place.category] || categoryMap.sacred;
 
   return (
     <motion.div

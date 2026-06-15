@@ -53,14 +53,7 @@ function DirectoryCard({ entry, index }) {
   const isPhonePublic = entry.phone && entry.phone !== 'Available on official district portal';
   const isEmailPublic = entry.email && entry.email !== 'Available on official district portal';
 
-  const gradients = [
-    'from-emerald-100 to-teal-200/80 border-teal-300/50',
-    'from-blue-100 to-indigo-200/80 border-indigo-300/50',
-    'from-amber-100 to-orange-200/80 border-orange-300/50',
-    'from-rose-100 to-pink-200/80 border-pink-300/50',
-    'from-violet-100 to-purple-200/80 border-purple-300/50',
-  ];
-  const cardStyle = gradients[index % gradients.length];
+  const cardStyle = 'from-category-services-start to-category-services-end border-category-services-border';
 
   return (
     <motion.div

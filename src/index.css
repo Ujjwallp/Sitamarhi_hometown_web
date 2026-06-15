@@ -18,6 +18,40 @@
   }
 }
 
+:root {
+  /* Design System Category Tokens */
+  
+  /* Sacred / Pilgrimage - Gold / Saffron */
+  --color-sacred-start: #fef3c7; /* amber-100 */
+  --color-sacred-end: #fed7aa; /* orange-200 */
+  --color-sacred-border: #fcd34d; /* amber-300 */
+  --color-sacred-accent: #d97706; /* amber-600 */
+  
+  /* Heritage - Purple */
+  --color-heritage-start: #f3e8ff; /* purple-100 */
+  --color-heritage-end: #ddd6fe; /* violet-200 */
+  --color-heritage-border: #d8b4fe; /* purple-300 */
+  --color-heritage-accent: #9333ea; /* purple-600 */
+  
+  /* Culture - Pink */
+  --color-culture-start: #ffe4e6; /* rose-100 */
+  --color-culture-end: #fbcfe8; /* pink-200 */
+  --color-culture-border: #f9a8d4; /* pink-300 */
+  --color-culture-accent: #e11d48; /* rose-600 */
+  
+  /* Information / Stats - Blue */
+  --color-info-start: #dbeafe; /* blue-100 */
+  --color-info-end: #c7d2fe; /* indigo-200 */
+  --color-info-border: #a5b4fc; /* indigo-300 */
+  --color-info-accent: #4f46e5; /* indigo-600 */
+  
+  /* Services / Utilities - Green */
+  --color-services-start: #d1fae5; /* emerald-100 */
+  --color-services-end: #99f6e4; /* teal-200 */
+  --color-services-border: #5eead4; /* teal-300 */
+  --color-services-accent: #059669; /* emerald-600 */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

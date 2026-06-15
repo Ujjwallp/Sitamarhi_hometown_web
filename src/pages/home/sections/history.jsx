@@ -9,13 +9,7 @@ function HeritageNode({ item, index }) {
   const Icon = item.icon;
   const isLeft = index % 2 === 0;
 
-  const gradients = [
-    'from-[#FFEFD6] to-amber-200/80 border-amber-300/50',
-    'from-rose-100 to-pink-200/80 border-pink-300/50',
-    'from-cyan-100 to-sky-200/80 border-sky-300/50',
-    'from-emerald-100 to-teal-200/80 border-teal-300/50',
-  ];
-  const cardStyle = gradients[index % gradients.length];
+  const cardStyle = 'from-category-heritage-start to-category-heritage-end border-category-heritage-border';
 
   return (
     <div className="w-full flex flex-col md:flex-row items-center relative my-4 md:my-3">

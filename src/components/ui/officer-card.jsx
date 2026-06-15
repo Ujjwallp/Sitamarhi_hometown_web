@@ -8,13 +8,7 @@ export default function OfficerCard({ officer, index }) {
   const hasPhone = officer.phone && officer.phone !== 'Available on official portal';
   const hasEmail = officer.email && officer.email !== 'Available on official portal';
 
-  const gradients = [
-    'from-slate-100 to-blue-200/60 border-blue-300/50',
-    'from-emerald-100 to-teal-200/60 border-teal-300/50',
-    'from-orange-100 to-amber-200/60 border-amber-300/50',
-    'from-rose-100 to-pink-200/60 border-pink-300/50',
-  ];
-  const cardStyle = gradients[index % gradients.length];
+  const cardStyle = 'from-category-services-start to-category-services-end border-category-services-border';
 
   return (
     <motion.div

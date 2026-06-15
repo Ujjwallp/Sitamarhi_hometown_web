@@ -76,13 +76,7 @@ export default function Hero() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl">
               {stats.map((stat, idx) => {
                 const icons = ['👥', '🏛️', '👥', '🏡'];
-                const gradients = [
-                  'from-blue-100/95 to-indigo-200/90 border-indigo-300/50',
-                  'from-emerald-100/95 to-teal-200/90 border-teal-300/50',
-                  'from-amber-100/95 to-orange-200/90 border-orange-300/50',
-                  'from-rose-100/95 to-pink-200/90 border-pink-300/50',
-                ];
-                const cardStyle = gradients[idx % gradients.length];
+                const cardStyle = 'from-category-info-start to-category-info-end border-category-info-border';
                 
                 return (
                   <div
