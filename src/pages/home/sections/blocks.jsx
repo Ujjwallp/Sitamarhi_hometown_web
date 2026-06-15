@@ -22,9 +22,9 @@ const blocks = [
 ];
 
 const SUBDIVISION_COLORS = {
-  Sitamarhi: { bg: 'bg-[#7A1F1F]', text: 'text-white', border: 'border-[#5a1515]', dot: 'bg-white' },
-  Bairgania: { bg: 'bg-[#0F766E]', text: 'text-white', border: 'border-[#0a5c56]', dot: 'bg-white' },
-  Pupri:     { bg: 'bg-[#1E40AF]', text: 'text-white', border: 'border-[#1a358f]', dot: 'bg-white' },
+  Sitamarhi: { bg: 'bg-[#7A1F1F]', text: 'text-white', border: 'border-[#5a1515]', dot: 'bg-white', gradient: 'from-blue-50 to-indigo-100/80 border-indigo-200/50' },
+  Bairgania: { bg: 'bg-[#0F766E]', text: 'text-white', border: 'border-[#0a5c56]', dot: 'bg-white', gradient: 'from-emerald-50 to-teal-100/80 border-teal-200/50' },
+  Pupri:     { bg: 'bg-[#1E40AF]', text: 'text-white', border: 'border-[#1a358f]', dot: 'bg-white', gradient: 'from-amber-50 to-orange-100/80 border-orange-200/50' },
 };
 
 function BlockCard({ block, index }) {
@@ -38,7 +38,7 @@ function BlockCard({ block, index }) {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.45, delay: (index % 8) * 0.05, ease: 'easeOut' }}
-      className="group bg-gradient-to-br from-amber-50 via-orange-50 to-[#FFE4B5] border border-devotional-gold/30 rounded-2xl p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
+      className={`group bg-gradient-to-br ${colors.gradient} border rounded-2xl p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative overflow-hidden`}
     >
       <div className="absolute top-3 right-3 w-7 h-7 bg-devotional-secondary/60 border border-devotional-gold/15 rounded-full flex items-center justify-center">
         <span className="text-xs font-bold text-devotional-maroon">{(index + 1).toString().padStart(2, '0')}</span>

@@ -9,8 +9,8 @@ const reasons = [
     description:
       'Sitamarhi is the most revered birthplace of Goddess Sita — the divine consort of Lord Ram and the embodiment of grace, courage, and devotion. Visiting Punaura Dham and Janaki Sthan is a once-in-a-lifetime spiritual experience for devotees of the Ramayana tradition.',
     gradient: 'from-amber-400 to-orange-500',
-    lightBg: 'bg-amber-50',
-    border: 'border-amber-100',
+    cardGradient: 'from-amber-50 to-orange-100/80',
+    border: 'border-amber-200/50',
     hoverBorder: 'hover:border-amber-300',
     textAccent: 'text-amber-600',
     stat: '∞ Spiritual Significance',
@@ -21,8 +21,8 @@ const reasons = [
     description:
       'The Mithila kingdom, ruled by the philosopher-king Janaka, was one of the great centres of learning, philosophy, and culture in ancient India. Its traditions of Nyaya philosophy, Maithili literature, and the Tirhuta script endure to this day across Bihar and Nepal.',
     gradient: 'from-purple-500 to-violet-700',
-    lightBg: 'bg-purple-50',
-    border: 'border-purple-100',
+    cardGradient: 'from-purple-50 to-violet-100/80',
+    border: 'border-purple-200/50',
     hoverBorder: 'hover:border-purple-300',
     textAccent: 'text-purple-600',
     stat: '3000+ Years of History',
@@ -33,8 +33,8 @@ const reasons = [
     description:
       'Sitamarhi forms the centrepiece of the Sita Parikrama circuit — a deeply meaningful pilgrimage route connecting Punaura Dham, Janaki Sthan, Haleshwar Sthan, and Panth Pakar. The circuit is especially vibrant during Ram Navami, Navratri, and Vivah Panchami.',
     gradient: 'from-emerald-500 to-teal-700',
-    lightBg: 'bg-emerald-50',
-    border: 'border-emerald-100',
+    cardGradient: 'from-emerald-50 to-teal-100/80',
+    border: 'border-emerald-200/50',
     hoverBorder: 'hover:border-emerald-300',
     textAccent: 'text-emerald-600',
     stat: '4 Sacred Sites',
@@ -45,8 +45,8 @@ const reasons = [
     description:
       "Experience Madhubani art — one of India's most celebrated folk traditions with a GI tag — along with Chhath Puja, Maithili music, and the vibrant festivals of the Mithila region. Sitamarhi offers a living encounter with a culture that has flourished for over three millennia.",
     gradient: 'from-rose-500 to-pink-700',
-    lightBg: 'bg-rose-50',
-    border: 'border-rose-100',
+    cardGradient: 'from-rose-50 to-pink-100/80',
+    border: 'border-rose-200/50',
     hoverBorder: 'hover:border-rose-300',
     textAccent: 'text-rose-600',
     stat: '3000+ Years of Culture',
@@ -64,7 +64,7 @@ function ReasonCard({ reason, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.12, ease: 'easeOut' }}
-      className={`group ${reason.lightBg} border ${reason.border} ${reason.hoverBorder} rounded-3xl p-7 hover:shadow-xl transition-all duration-400 hover:-translate-y-1.5 flex flex-col relative overflow-hidden`}
+      className={`group bg-gradient-to-br ${reason.cardGradient} border ${reason.border} ${reason.hoverBorder} rounded-3xl p-7 hover:shadow-xl transition-all duration-400 hover:-translate-y-1.5 flex flex-col relative overflow-hidden`}
     >
       <div className={`absolute -top-8 -right-8 w-28 h-28 bg-gradient-to-br ${reason.gradient} opacity-10 rounded-full group-hover:opacity-20 transition-opacity`} />
       <div className={`w-14 h-14 bg-gradient-to-br ${reason.gradient} rounded-2xl flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform duration-300`}>

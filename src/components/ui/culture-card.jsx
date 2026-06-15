@@ -4,7 +4,15 @@ import { Lightbulb } from 'lucide-react';
 
 export default function CultureCard({ item, index }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
+
+  const gradients = [
+    'from-rose-50 to-pink-100/80 border-pink-200/50',
+    'from-amber-50 to-orange-100/80 border-orange-200/50',
+    'from-emerald-50 to-teal-100/80 border-teal-200/50',
+    'from-violet-50 to-purple-100/80 border-purple-200/50',
+  ];
+  const cardStyle = gradients[index % gradients.length];
 
   return (
     <motion.div
@@ -12,7 +20,7 @@ export default function CultureCard({ item, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.12, ease: 'easeOut' }}
-      className="group bg-gradient-to-br from-rose-50 to-pink-100/80 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border border-rose-200/50 h-full"
+      className={`group bg-gradient-to-br ${cardStyle} rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border h-full`}
     >
       <div className="relative h-52 overflow-hidden">
         <img

@@ -9,6 +9,7 @@ const contacts = [
     shortDesc: 'Immediate Response',
     description: 'All-in-one emergency helpline for police assistance, active 24/7 across the state.',
     gradient: 'from-red-500 to-rose-700',
+    cardGradient: 'from-red-50 to-rose-100/80',
     textColor: 'text-red-700',
     borderAccent: 'border-l-red-600',
   },
@@ -19,6 +20,7 @@ const contacts = [
     shortDesc: 'Medical Support',
     description: 'Emergency ambulance dispatch and medical transportation services for hospitals.',
     gradient: 'from-emerald-400 to-teal-600',
+    cardGradient: 'from-emerald-50 to-teal-100/80',
     textColor: 'text-emerald-700',
     borderAccent: 'border-l-emerald-600',
   },
@@ -29,6 +31,7 @@ const contacts = [
     shortDesc: 'Fire & Rescue',
     description: 'Fire department hotline for fire outbreaks, containment, and rescue operations.',
     gradient: 'from-orange-400 to-amber-600',
+    cardGradient: 'from-orange-50 to-amber-100/80',
     textColor: 'text-orange-700',
     borderAccent: 'border-l-orange-600',
   },
@@ -39,6 +42,7 @@ const contacts = [
     shortDesc: 'Safety & Support',
     description: 'Immediate counseling, rescue, and referral services for women in distress.',
     gradient: 'from-pink-500 to-rose-600',
+    cardGradient: 'from-pink-50 to-rose-100/80',
     textColor: 'text-rose-700',
     borderAccent: 'border-l-rose-600',
   },
@@ -49,6 +53,7 @@ const contacts = [
     shortDesc: 'Local Governance',
     description: 'Disaster management, municipal assistance, and administrative emergency coordination.',
     gradient: 'from-amber-500 to-yellow-600',
+    cardGradient: 'from-amber-50 to-yellow-100/80',
     textColor: 'text-amber-700',
     borderAccent: 'border-l-amber-600',
   },
@@ -59,6 +64,7 @@ const contacts = [
     shortDesc: 'Child Protection',
     description: 'Nationwide toll-free outreach service for children in need of care and protection.',
     gradient: 'from-violet-500 to-purple-700',
+    cardGradient: 'from-violet-50 to-purple-100/80',
     textColor: 'text-purple-700',
     borderAccent: 'border-l-purple-600',
   },
@@ -69,6 +75,7 @@ const contacts = [
     shortDesc: 'Urgent Police Help',
     description: 'Traditional direct dial helpline for immediate police response and local security threat reporting.',
     gradient: 'from-blue-500 to-indigo-600',
+    cardGradient: 'from-blue-50 to-indigo-100/80',
     textColor: 'text-blue-700',
     borderAccent: 'border-l-blue-600',
   },
@@ -85,7 +92,7 @@ function ContactCard({ contact }) {
   };
 
   return (
-    <div className={`group bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 ${contact.borderAccent} border border-r-devotional-gold/20 border-t-devotional-gold/20 border-b-devotional-gold/20 rounded-3xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4 shadow-sm relative overflow-hidden`}>
+    <div className={`group bg-gradient-to-br ${contact.cardGradient} border-l-4 ${contact.borderAccent} border border-r-black/5 border-t-black/5 border-b-black/5 rounded-3xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4 shadow-sm relative overflow-hidden`}>
       <div className={`absolute -top-8 -right-8 w-28 h-28 bg-gradient-to-br ${contact.gradient} opacity-10 rounded-full group-hover:opacity-20 transition-opacity`} />
       
       <div className="flex items-center gap-3 relative z-10">

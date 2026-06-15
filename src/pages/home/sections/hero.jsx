@@ -76,10 +76,18 @@ export default function Hero() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl">
               {stats.map((stat, idx) => {
                 const icons = ['👥', '🏛️', '👥', '🏡'];
+                const gradients = [
+                  'from-blue-50/95 to-indigo-100/90 border-indigo-200/50',
+                  'from-emerald-50/95 to-teal-100/90 border-teal-200/50',
+                  'from-amber-50/95 to-orange-100/90 border-orange-200/50',
+                  'from-rose-50/95 to-pink-100/90 border-pink-200/50',
+                ];
+                const cardStyle = gradients[idx % gradients.length];
+                
                 return (
                   <div
                     key={stat.label}
-                    className="bg-gradient-to-br from-amber-50/95 to-orange-100/90 border border-devotional-gold/40 rounded-3xl p-4 text-center hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 shadow-md flex flex-col items-center justify-between"
+                    className={`bg-gradient-to-br ${cardStyle} border rounded-3xl p-4 text-center hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 shadow-md flex flex-col items-center justify-between`}
                   >
                     <div className="text-devotional-gold text-lg mb-2 select-none">{icons[idx]}</div>
                     <div className="flex-grow flex flex-col justify-center">

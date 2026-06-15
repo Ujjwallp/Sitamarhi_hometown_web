@@ -3,10 +3,18 @@ import { motion, useInView } from 'framer-motion';
 
 export default function OfficerCard({ officer, index }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
-  const hasPhone = !!officer.phone;
-  const hasEmail = !!officer.email;
+  const hasPhone = officer.phone && officer.phone !== 'Available on official portal';
+  const hasEmail = officer.email && officer.email !== 'Available on official portal';
+
+  const gradients = [
+    'from-slate-50 to-blue-100/60 border-blue-200/50',
+    'from-emerald-50 to-teal-100/60 border-teal-200/50',
+    'from-orange-50 to-amber-100/60 border-amber-200/50',
+    'from-rose-50 to-pink-100/60 border-pink-200/50',
+  ];
+  const cardStyle = gradients[index % gradients.length];
 
   return (
     <motion.div
@@ -14,7 +22,7 @@ export default function OfficerCard({ officer, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, delay: index * 0.08, ease: 'easeOut' }}
-      className="group bg-gradient-to-br from-slate-50 to-blue-100/60 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border border-blue-200/50"
+      className={`group bg-gradient-to-br ${cardStyle} rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border`}
     >
       <div className="bg-white/40 border-b border-white p-6 relative overflow-hidden flex flex-col items-center text-center">
         <div className="absolute top-0 right-0 w-28 h-28 bg-white/5 rounded-full -translate-y-10 translate-x-10" />

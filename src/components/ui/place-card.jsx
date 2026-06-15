@@ -4,7 +4,15 @@ import { MapPin, ChevronRight, Clock, Navigation } from 'lucide-react';
 
 export default function PlaceCard({ place, onLearnMore, index }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
+
+  const gradients = [
+    'from-amber-50 to-orange-100/80 border-orange-200/50',
+    'from-blue-50 to-indigo-100/80 border-indigo-200/50',
+    'from-emerald-50 to-teal-100/80 border-teal-200/50',
+    'from-rose-50 to-pink-100/80 border-pink-200/50',
+  ];
+  const cardStyle = gradients[index % gradients.length];
 
   return (
     <motion.div
@@ -12,7 +20,7 @@ export default function PlaceCard({ place, onLearnMore, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
-      className="group bg-gradient-to-br from-amber-50 to-orange-100/80 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border border-amber-200/50"
+      className={`group bg-gradient-to-br ${cardStyle} rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border`}
     >
       <div className="relative h-60 overflow-hidden">
         <img
