@@ -92,17 +92,30 @@ export default function QuickAccess() {
           <p className="text-devotional-text/75 text-sm">Instant links to important services and places in Sitamarhi</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const Icon = service.icon;
+            
+            const gradients = [
+              'from-blue-50 to-indigo-100/80 border-indigo-200/50',
+              'from-emerald-50 to-teal-100/80 border-teal-200/50',
+              'from-orange-50 to-amber-100/80 border-orange-200/50',
+              'from-amber-50 to-orange-100/80 border-amber-200/50',
+              'from-red-50 to-rose-100/80 border-rose-200/50',
+              'from-violet-50 to-purple-100/80 border-purple-200/50',
+              'from-cyan-50 to-sky-100/80 border-sky-200/50',
+              'from-slate-50 to-slate-200/80 border-slate-300/50',
+            ];
+            const cardGradient = gradients[index % gradients.length];
+
             return (
               <a
                 key={service.label}
                 href={service.href}
                 target={service.external ? '_blank' : undefined}
                 rel={service.external ? 'noopener noreferrer' : undefined}
-                className={`bg-white border border-slate-100 rounded-2xl p-4 flex flex-col items-center text-center gap-2 transition-all duration-200 group hover:-translate-y-1 hover:shadow-xl hover:border-slate-200 relative overflow-hidden`}
+                className={`bg-gradient-to-br ${cardGradient} border rounded-2xl p-4 flex flex-col items-center text-center gap-2 transition-all duration-200 group hover:-translate-y-1 hover:shadow-md relative overflow-hidden`}
               >
-                <div className={`w-12 h-12 ${service.color} border ${service.borderColor} rounded-xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform`}>
+                <div className={`w-12 h-12 bg-white/60 border border-white rounded-xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform`}>
                   <Icon className={`w-5 h-5 ${service.iconColor}`} />
                 </div>
                 <p className="text-xs font-bold text-slate-900 leading-tight mt-1">{service.label}</p>

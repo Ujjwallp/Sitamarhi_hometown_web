@@ -53,13 +53,22 @@ function DirectoryCard({ entry, index }) {
   const isPhonePublic = entry.phone && entry.phone !== 'Available on official district portal';
   const isEmailPublic = entry.email && entry.email !== 'Available on official district portal';
 
+  const gradients = [
+    'from-emerald-50 to-teal-100/80 border-teal-200/50',
+    'from-blue-50 to-indigo-100/80 border-indigo-200/50',
+    'from-amber-50 to-orange-100/80 border-orange-200/50',
+    'from-rose-50 to-pink-100/80 border-pink-200/50',
+    'from-violet-50 to-purple-100/80 border-purple-200/50',
+  ];
+  const cardStyle = gradients[index % gradients.length];
+
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 24 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.06, ease: 'easeOut' }}
-      className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+      className={`bg-gradient-to-br ${cardStyle} rounded-2xl border p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group`}
     >
       <div>
         <div className="flex items-center gap-3.5 mb-5">
@@ -101,7 +110,7 @@ function DirectoryCard({ entry, index }) {
         {isPhonePublic ? (
           <a
             href={`tel:${entry.phone}`}
-            className="flex-1 inline-flex items-center justify-center bg-slate-900 hover:bg-slate-800 text-white px-3 py-2 rounded-xl text-xs font-bold transition-colors shadow-sm"
+            className="flex-1 inline-flex items-center justify-center bg-white/60 hover:bg-white text-slate-800 border border-white px-3 py-2 rounded-xl text-xs font-bold transition-colors shadow-sm"
           >
             Call
           </a>
@@ -118,7 +127,7 @@ function DirectoryCard({ entry, index }) {
           href={entry.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 inline-flex items-center justify-center gap-1 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 px-3 py-2 rounded-xl text-xs font-bold transition-colors"
+          className="flex-1 inline-flex items-center justify-center gap-1 bg-white/60 hover:bg-white text-slate-800 border border-white px-3 py-2 rounded-xl text-xs font-bold transition-colors shadow-sm"
         >
           <Globe className="w-3 h-3" />
           Portal

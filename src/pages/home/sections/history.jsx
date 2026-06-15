@@ -13,7 +13,7 @@ function HeritageNode({ item, index }) {
     <div className="w-full flex flex-col md:flex-row items-center relative my-4 md:my-3">
       <div className={`w-full md:w-1/2 flex justify-center ${isLeft ? 'md:justify-end md:pr-12' : 'md:order-2 md:justify-start md:pl-12'}`}>
         <div className="w-full max-w-md px-4">
-          <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+          <div className="bg-gradient-to-br from-[#FFF8ED] to-amber-100/80 border border-amber-200/50 rounded-3xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative group">
             <div className={`w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm mb-4 ${isLeft ? 'md:ml-auto md:mr-0' : 'md:mr-auto md:ml-0'} group-hover:shadow transition-shadow`}>
               <Icon className="w-6 h-6 text-devotional-maroon" />
             </div>
