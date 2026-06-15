@@ -59,10 +59,9 @@ function DirectoryCard({ entry, index }) {
       initial={{ opacity: 0, y: 24 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.06, ease: 'easeOut' }}
-      className="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200 hover:border-amber-400 p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+      className="bg-stone-50 rounded-2xl border border-stone-200 p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
     >
-      <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-gradient-to-br from-amber-400 to-orange-500 opacity-0 group-hover:opacity-10 rounded-full blur-2xl transition-opacity duration-500 pointer-events-none" />
-      <div className="relative z-10">
+      <div>
         <div className="flex items-center gap-3.5 mb-5">
           <div className={`w-12 h-12 rounded-xl ${entry.bg} flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform`}>
             <Icon className={`w-6 h-6 ${entry.color}`} />
@@ -98,11 +97,11 @@ function DirectoryCard({ entry, index }) {
           </div>
         </div>
       </div>
-      <div className="flex gap-2 pt-4 border-t border-slate-100 relative z-10">
+      <div className="flex gap-2 pt-4 border-t border-slate-200">
         {isPhonePublic ? (
           <a
             href={`tel:${entry.phone}`}
-            className="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
+            className="flex-1 inline-flex items-center justify-center bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 px-3 py-2 rounded-xl text-xs font-bold transition-colors"
           >
             Call
           </a>
@@ -119,7 +118,7 @@ function DirectoryCard({ entry, index }) {
           href={entry.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 inline-flex items-center justify-center gap-1 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
+          className="flex-1 inline-flex items-center justify-center gap-1 bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 px-3 py-2 rounded-xl text-xs font-bold transition-colors"
         >
           <Globe className="w-3 h-3" />
           Portal

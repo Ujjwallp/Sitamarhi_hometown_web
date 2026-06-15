@@ -13,10 +13,8 @@ function HeritageNode({ item, index }) {
     <div className="w-full flex flex-col md:flex-row items-center relative my-4 md:my-3">
       <div className={`w-full md:w-1/2 flex justify-center ${isLeft ? 'md:justify-end md:pr-12' : 'md:order-2 md:justify-start md:pl-12'}`}>
         <div className="w-full max-w-md px-4">
-          <div className="bg-white/95 backdrop-blur-md border border-stone-200 hover:border-devotional-saffron rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group overflow-hidden">
-            <div className={`absolute ${isLeft ? '-bottom-12 -left-12' : '-bottom-12 -right-12'} w-40 h-40 bg-gradient-to-br from-amber-400 to-orange-500 opacity-0 group-hover:opacity-10 rounded-full blur-2xl transition-opacity duration-500 pointer-events-none`} />
-            <div className="relative z-10">
-            <div className={`w-12 h-12 bg-devotional-secondary rounded-xl flex items-center justify-center shadow-sm mb-4 ${isLeft ? 'md:ml-auto md:mr-0' : 'md:mr-auto md:ml-0'} group-hover:scale-105 transition-transform`}>
+          <div className="bg-orange-50 border border-orange-100 rounded-3xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative group">
+            <div className={`w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm mb-4 ${isLeft ? 'md:ml-auto md:mr-0' : 'md:mr-auto md:ml-0'} group-hover:shadow transition-shadow`}>
               <Icon className="w-6 h-6 text-devotional-maroon" />
             </div>
 
@@ -37,10 +35,9 @@ function HeritageNode({ item, index }) {
               {item.description}
             </p>
 
-            <span className={`absolute top-4 text-[10px] font-extrabold text-devotional-gold bg-devotional-bg/50 border border-devotional-secondary rounded-full px-2 py-0.5 shadow-sm ${isLeft ? 'right-4 md:right-auto md:left-4' : 'right-4'}`}>
+            <span className={`absolute top-4 text-[10px] font-extrabold text-orange-600 bg-white border border-orange-200 rounded-full px-2 py-0.5 shadow-sm ${isLeft ? 'right-4 md:right-auto md:left-4' : 'right-4'}`}>
               {(index + 1).toString().padStart(2, '0')}
             </span>
-            </div>
           </div>
         </div>
       </div>

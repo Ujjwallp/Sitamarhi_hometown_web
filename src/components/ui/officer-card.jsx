@@ -14,7 +14,7 @@ export default function OfficerCard({ officer, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, delay: index * 0.08, ease: 'easeOut' }}
-      className="group bg-white/95 backdrop-blur-md rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-400 hover:-translate-y-1.5 flex flex-col border border-stone-200 hover:border-amber-400 relative"
+      className="group bg-orange-50 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border border-orange-100"
     >
       <div className={`bg-gradient-to-br ${officer.gradient} p-6 relative overflow-hidden flex flex-col items-center text-center`}>
         <div className="absolute top-0 right-0 w-28 h-28 bg-white/5 rounded-full -translate-y-10 translate-x-10" />
@@ -84,7 +84,7 @@ export default function OfficerCard({ officer, index }) {
           {hasPhone ? (
             <a
               href={`tel:${officer.phone}`}
-              className="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white px-3 py-2.5 rounded-xl text-xs font-bold transition-all shadow-md text-center relative z-10"
+              className="flex-1 inline-flex items-center justify-center bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 px-3 py-2.5 rounded-xl text-xs font-bold transition-colors text-center"
             >
               Call
             </a>
@@ -100,7 +100,7 @@ export default function OfficerCard({ officer, index }) {
           {hasEmail ? (
             <a
               href={`mailto:${officer.email}`}
-              className="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white px-3 py-2.5 rounded-xl text-xs font-bold transition-all shadow-md text-center relative z-10"
+              className="flex-1 inline-flex items-center justify-center bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 px-3 py-2.5 rounded-xl text-xs font-bold transition-colors text-center"
             >
               Email
             </a>
@@ -117,7 +117,7 @@ export default function OfficerCard({ officer, index }) {
             href={officer.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white px-3 py-2.5 rounded-xl text-xs font-bold transition-all shadow-md text-center relative z-10"
+            className="flex-1 inline-flex items-center justify-center bg-amber-50 text-amber-700 hover:bg-amber-100 border border-amber-200 px-3 py-2.5 rounded-xl text-xs font-bold transition-colors text-center"
           >
             Website
           </a>
