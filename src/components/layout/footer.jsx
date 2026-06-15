@@ -97,12 +97,12 @@ export default function Footer() {
             </h4>
             <div className="space-y-1">
               <p className="text-white font-extrabold text-base">Ujjwal Prakash</p>
-              <p className="text-slate-450 text-xs font-semibold uppercase tracking-wider">Full Stack Developer</p>
+              <p className="text-slate-450 text-xs font-semibold uppercase tracking-wider">Frontend Developer</p>
               <a
-                href="mailto:ujjwalprakash.dev@gmail.com"
+                href="mailto:Ujjwallp22@gmail.com"
                 className="text-devotional-saffron hover:text-devotional-gold text-sm font-medium transition-colors block pt-1"
               >
-                ujjwalprakash.dev@gmail.com
+                Ujjwallp22@gmail.com
               </a>
             </div>
           </div>

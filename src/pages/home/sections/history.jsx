@@ -35,7 +35,7 @@ function HeritageNode({ item, index }) {
               {item.description}
             </p>
 
-            <span className="absolute top-4 right-4 text-[10px] font-extrabold text-devotional-gold bg-devotional-bg/50 border border-devotional-secondary rounded-full px-2 py-0.5 shadow-sm">
+            <span className={`absolute top-4 text-[10px] font-extrabold text-devotional-gold bg-devotional-bg/50 border border-devotional-secondary rounded-full px-2 py-0.5 shadow-sm ${isLeft ? 'right-4 md:right-auto md:left-4' : 'right-4'}`}>
               {(index + 1).toString().padStart(2, '0')}
             </span>
           </div>
