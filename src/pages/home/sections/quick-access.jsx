@@ -100,14 +100,14 @@ export default function QuickAccess() {
                 href={service.href}
                 target={service.external ? '_blank' : undefined}
                 rel={service.external ? 'noopener noreferrer' : undefined}
-                className={`${service.color} border ${service.borderColor} rounded-2xl p-4 flex flex-col items-center text-center gap-2 transition-all duration-200 group hover:-translate-y-1 hover:shadow-md`}
+                className={`bg-white border border-slate-100 rounded-2xl p-4 flex flex-col items-center text-center gap-2 transition-all duration-200 group hover:-translate-y-1 hover:shadow-xl hover:border-slate-200 relative overflow-hidden`}
               >
-                <div className={`w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow`}>
+                <div className={`w-12 h-12 ${service.color} border ${service.borderColor} rounded-xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform`}>
                   <Icon className={`w-5 h-5 ${service.iconColor}`} />
                 </div>
-                <p className="text-xs font-bold text-devotional-text leading-tight">{service.label}</p>
-                <p className="text-xs text-devotional-text/75 leading-tight hidden sm:block">{service.description}</p>
-                <ArrowUpRight className={`w-3 h-3 ${service.iconColor} opacity-0 group-hover:opacity-100 transition-opacity`} />
+                <p className="text-xs font-bold text-slate-900 leading-tight mt-1">{service.label}</p>
+                <p className="text-xs text-slate-500 leading-tight hidden sm:block">{service.description}</p>
+                <ArrowUpRight className={`w-3.5 h-3.5 ${service.iconColor} opacity-0 group-hover:opacity-100 transition-opacity absolute top-3 right-3`} />
               </a>
             );
           })}

@@ -12,7 +12,7 @@ export default function PlaceCard({ place, onLearnMore, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
-      className="group bg-amber-50 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border border-amber-100"
+      className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col border border-slate-100"
     >
       <div className="relative h-60 overflow-hidden">
         <img
@@ -39,22 +39,22 @@ export default function PlaceCard({ place, onLearnMore, index }) {
         <p className="text-slate-600 text-sm leading-relaxed flex-1 mb-5">
           {place.shortDesc}
         </p>
-        <div className="bg-amber-50 border border-amber-100 rounded-lg px-3 py-2 mb-5">
-          <p className="text-xs text-amber-800 font-medium">✨ {place.fact}</p>
+        <div className="bg-slate-50 border border-slate-100 rounded-xl px-3 py-2.5 mb-5">
+          <p className="text-xs text-slate-700 font-medium">✨ {place.fact}</p>
         </div>
         <div className="flex gap-2.5 mt-auto">
           <a
             href={place.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 px-3 py-2.5 rounded-xl text-xs font-bold transition-all shadow-sm"
+            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white px-3 py-2.5 rounded-xl text-xs font-bold transition-colors shadow-sm"
           >
             <Navigation className="w-3.5 h-3.5" />
             Directions
           </a>
           <button
             onClick={() => onLearnMore(place)}
-            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-200 px-3 py-2.5 rounded-xl text-xs font-bold transition-all shadow-sm"
+            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 px-3 py-2.5 rounded-xl text-xs font-bold transition-colors"
           >
             Learn More
             <ChevronRight className="w-3.5 h-3.5" />

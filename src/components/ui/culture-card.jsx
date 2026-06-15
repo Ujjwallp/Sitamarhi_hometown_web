@@ -12,7 +12,7 @@ export default function CultureCard({ item, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.12, ease: 'easeOut' }}
-      className="group bg-rose-50 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col border border-rose-100 h-full"
+      className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col border border-slate-100 h-full"
     >
       <div className="relative h-52 overflow-hidden">
         <img
@@ -28,11 +28,11 @@ export default function CultureCard({ item, index }) {
         <h3 className="absolute bottom-3 left-4 text-xl font-bold text-white drop-shadow-md">{item.title}</h3>
       </div>
       <div className="p-5 flex-1 flex flex-col justify-between">
-        <p className="text-devotional-text/85 text-sm leading-relaxed mb-4 flex-1">{item.description}</p>
+        <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-1">{item.description}</p>
 
-        <div className="flex items-start gap-2.5 bg-white border border-rose-100 rounded-xl p-3.5 mt-auto">
-          <Lightbulb className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
-          <p className="text-xs text-rose-800 leading-snug font-semibold">{item.fact}</p>
+        <div className="flex items-start gap-2.5 bg-slate-50 border border-slate-100 rounded-xl p-3.5 mt-auto">
+          <Lightbulb className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+          <p className="text-xs text-slate-700 leading-snug font-medium">{item.fact}</p>
         </div>
       </div>
     </motion.div>
