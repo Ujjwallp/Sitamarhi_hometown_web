@@ -10,10 +10,10 @@ function HeritageNode({ item, index }) {
   const isLeft = index % 2 === 0;
 
   const gradients = [
-    'from-[#FFF8ED] to-amber-100/80 border-amber-200/50',
-    'from-rose-50 to-pink-100/80 border-pink-200/50',
-    'from-cyan-50 to-sky-100/80 border-sky-200/50',
-    'from-emerald-50 to-teal-100/80 border-teal-200/50',
+    'from-[#FFEFD6] to-amber-200/80 border-amber-300/50',
+    'from-rose-100 to-pink-200/80 border-pink-300/50',
+    'from-cyan-100 to-sky-200/80 border-sky-300/50',
+    'from-emerald-100 to-teal-200/80 border-teal-300/50',
   ];
   const cardStyle = gradients[index % gradients.length];
 

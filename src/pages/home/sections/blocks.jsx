@@ -22,9 +22,9 @@ const blocks = [
 ];
 
 const SUBDIVISION_COLORS = {
-  Sitamarhi: { bg: 'bg-[#7A1F1F]', text: 'text-white', border: 'border-[#5a1515]', dot: 'bg-white', gradient: 'from-blue-50 to-indigo-100/80 border-indigo-200/50' },
-  Bairgania: { bg: 'bg-[#0F766E]', text: 'text-white', border: 'border-[#0a5c56]', dot: 'bg-white', gradient: 'from-emerald-50 to-teal-100/80 border-teal-200/50' },
-  Pupri:     { bg: 'bg-[#1E40AF]', text: 'text-white', border: 'border-[#1a358f]', dot: 'bg-white', gradient: 'from-amber-50 to-orange-100/80 border-orange-200/50' },
+  Sitamarhi: { bg: 'bg-[#7A1F1F]', text: 'text-white', border: 'border-[#5a1515]', dot: 'bg-white', gradient: 'from-blue-100 to-indigo-200/80 border-indigo-300/50' },
+  Bairgania: { bg: 'bg-[#0F766E]', text: 'text-white', border: 'border-[#0a5c56]', dot: 'bg-white', gradient: 'from-emerald-100 to-teal-200/80 border-teal-300/50' },
+  Pupri:     { bg: 'bg-[#1E40AF]', text: 'text-white', border: 'border-[#1a358f]', dot: 'bg-white', gradient: 'from-amber-100 to-orange-200/80 border-orange-300/50' },
 };
 
 function BlockCard({ block, index }) {

@@ -77,10 +77,10 @@ export default function Hero() {
               {stats.map((stat, idx) => {
                 const icons = ['👥', '🏛️', '👥', '🏡'];
                 const gradients = [
-                  'from-blue-50/95 to-indigo-100/90 border-indigo-200/50',
-                  'from-emerald-50/95 to-teal-100/90 border-teal-200/50',
-                  'from-amber-50/95 to-orange-100/90 border-orange-200/50',
-                  'from-rose-50/95 to-pink-100/90 border-pink-200/50',
+                  'from-blue-100/95 to-indigo-200/90 border-indigo-300/50',
+                  'from-emerald-100/95 to-teal-200/90 border-teal-300/50',
+                  'from-amber-100/95 to-orange-200/90 border-orange-300/50',
+                  'from-rose-100/95 to-pink-200/90 border-pink-300/50',
                 ];
                 const cardStyle = gradients[idx % gradients.length];
                 

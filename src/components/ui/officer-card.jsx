@@ -9,10 +9,10 @@ export default function OfficerCard({ officer, index }) {
   const hasEmail = officer.email && officer.email !== 'Available on official portal';
 
   const gradients = [
-    'from-slate-50 to-blue-100/60 border-blue-200/50',
-    'from-emerald-50 to-teal-100/60 border-teal-200/50',
-    'from-orange-50 to-amber-100/60 border-amber-200/50',
-    'from-rose-50 to-pink-100/60 border-pink-200/50',
+    'from-slate-100 to-blue-200/60 border-blue-300/50',
+    'from-emerald-100 to-teal-200/60 border-teal-300/50',
+    'from-orange-100 to-amber-200/60 border-amber-300/50',
+    'from-rose-100 to-pink-200/60 border-pink-300/50',
   ];
   const cardStyle = gradients[index % gradients.length];
 

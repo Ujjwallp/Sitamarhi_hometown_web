@@ -7,10 +7,10 @@ export default function PlaceCard({ place, onLearnMore, index }) {
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   const gradients = [
-    'from-amber-50 to-orange-100/80 border-orange-200/50',
-    'from-blue-50 to-indigo-100/80 border-indigo-200/50',
-    'from-emerald-50 to-teal-100/80 border-teal-200/50',
-    'from-rose-50 to-pink-100/80 border-pink-200/50',
+    'from-amber-100 to-orange-200/80 border-orange-300/50',
+    'from-blue-100 to-indigo-200/80 border-indigo-300/50',
+    'from-emerald-100 to-teal-200/80 border-teal-300/50',
+    'from-rose-100 to-pink-200/80 border-pink-300/50',
   ];
   const cardStyle = gradients[index % gradients.length];
 

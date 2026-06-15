@@ -96,14 +96,14 @@ export default function QuickAccess() {
             const Icon = service.icon;
             
             const gradients = [
-              'from-blue-50 to-indigo-100/80 border-indigo-200/50',
-              'from-emerald-50 to-teal-100/80 border-teal-200/50',
-              'from-orange-50 to-amber-100/80 border-orange-200/50',
-              'from-amber-50 to-orange-100/80 border-amber-200/50',
-              'from-red-50 to-rose-100/80 border-rose-200/50',
-              'from-violet-50 to-purple-100/80 border-purple-200/50',
-              'from-cyan-50 to-sky-100/80 border-sky-200/50',
-              'from-slate-50 to-slate-200/80 border-slate-300/50',
+              'from-blue-100 to-indigo-200/80 border-indigo-300/50',
+              'from-emerald-100 to-teal-200/80 border-teal-300/50',
+              'from-orange-100 to-amber-200/80 border-orange-300/50',
+              'from-amber-100 to-orange-200/80 border-amber-300/50',
+              'from-red-100 to-rose-200/80 border-rose-300/50',
+              'from-violet-100 to-purple-200/80 border-purple-300/50',
+              'from-cyan-100 to-sky-200/80 border-sky-300/50',
+              'from-slate-100 to-slate-200/80 border-slate-300/50',
             ];
             const cardGradient = gradients[index % gradients.length];
 
