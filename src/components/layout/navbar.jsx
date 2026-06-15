@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import sitaLogo from '@/assets/logos/sita-logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,7 @@ export default function Navbar() {
           <a href="#home" className="flex items-center gap-3 group">
             <div className="w-[46px] h-[46px] md:w-[52px] md:h-[52px] rounded-full overflow-hidden border-2 border-devotional-gold shrink-0 shadow-md">
               <img
-                src="/assets/hero/sita-logo.png"
+                src={sitaLogo}
                 alt="Sitamarhi Logo"
                 className="w-full scale-[1.35] object-cover object-top"
                 style={{ transform: 'scale(1.4) translateY(2px)' }}

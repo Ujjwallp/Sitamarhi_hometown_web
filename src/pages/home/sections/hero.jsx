@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Info, Compass, Map } from 'lucide-react';
+import heroBg from '@/assets/images/hero/hero-bg.png';
 
 const stats = [
   { value: '34.2 Lakh', label: 'Population' },
@@ -17,7 +18,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('@/assets/images/hero/hero-bg.png')",
+          backgroundImage: `url(${heroBg})`,
           opacity: 1
         }}
       />
