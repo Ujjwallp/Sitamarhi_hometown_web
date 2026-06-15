@@ -12,8 +12,9 @@ export default function PlaceCard({ place, onLearnMore, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
-      className="group bg-gradient-to-br from-[#FFF8ED] via-amber-50 to-[#FFE4B5] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col border border-devotional-gold/30"
+      className="group bg-white/95 backdrop-blur-md rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col border border-stone-200 hover:border-devotional-saffron relative"
     >
+      <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-gradient-to-br from-amber-400 to-orange-500 opacity-0 group-hover:opacity-10 rounded-full blur-2xl transition-opacity duration-500 pointer-events-none" />
       <div className="relative h-60 overflow-hidden">
         <img
           src={place.image}
@@ -21,7 +22,7 @@ export default function PlaceCard({ place, onLearnMore, index }) {
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
         <span className={`absolute top-4 left-4 ${place.tagColor} text-white text-xs font-bold px-3 py-1 rounded-full shadow-md`}>
           {place.tag}
         </span>
@@ -47,14 +48,14 @@ export default function PlaceCard({ place, onLearnMore, index }) {
             href={place.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-navy-950 hover:bg-navy-800 text-white px-3 py-2.5 rounded-xl text-xs font-bold transition-colors shadow-sm"
+            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white px-3 py-2.5 rounded-xl text-xs font-bold transition-all shadow-sm relative z-10"
           >
             <Navigation className="w-3.5 h-3.5" />
             Directions
           </a>
           <button
             onClick={() => onLearnMore(place)}
-            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 hover:border-amber-300 px-3 py-2.5 rounded-xl text-xs font-bold transition-all"
+            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white px-3 py-2.5 rounded-xl text-xs font-bold transition-all shadow-sm relative z-10"
           >
             Learn More
             <ChevronRight className="w-3.5 h-3.5" />

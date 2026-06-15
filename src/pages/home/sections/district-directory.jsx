@@ -59,9 +59,10 @@ function DirectoryCard({ entry, index }) {
       initial={{ opacity: 0, y: 24 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.06, ease: 'easeOut' }}
-      className="bg-gradient-to-br from-[#FFF8ED] via-amber-50 to-[#FFE4B5] rounded-2xl border border-devotional-gold/30 p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
+      className="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200 hover:border-amber-400 p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
     >
-      <div>
+      <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-gradient-to-br from-amber-400 to-orange-500 opacity-0 group-hover:opacity-10 rounded-full blur-2xl transition-opacity duration-500 pointer-events-none" />
+      <div className="relative z-10">
         <div className="flex items-center gap-3.5 mb-5">
           <div className={`w-12 h-12 rounded-xl ${entry.bg} flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform`}>
             <Icon className={`w-6 h-6 ${entry.color}`} />
@@ -97,11 +98,11 @@ function DirectoryCard({ entry, index }) {
           </div>
         </div>
       </div>
-      <div className="flex gap-2 pt-4 border-t border-slate-50">
+      <div className="flex gap-2 pt-4 border-t border-slate-100 relative z-10">
         {isPhonePublic ? (
           <a
             href={`tel:${entry.phone}`}
-            className="flex-1 inline-flex items-center justify-center bg-devotional-secondary hover:bg-devotional-gold/20 text-devotional-text px-3 py-2 rounded-xl text-xs font-bold transition-all border border-devotional-secondary"
+            className="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
           >
             Call
           </a>
@@ -118,7 +119,7 @@ function DirectoryCard({ entry, index }) {
           href={entry.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 inline-flex items-center justify-center gap-1 bg-devotional-maroon hover:bg-devotional-saffron text-white px-3 py-2 rounded-xl text-xs font-bold transition-colors shadow-sm"
+          className="flex-1 inline-flex items-center justify-center gap-1 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition-all shadow-sm"
         >
           <Globe className="w-3 h-3" />
           Portal
