@@ -16,6 +16,13 @@ const Administration = lazy(() => import('@/pages/home/sections/administration')
 const DistrictDirectory = lazy(() => import('@/pages/home/sections/district-directory'));
 const Emergency = lazy(() => import('@/pages/home/sections/emergency'));
 
+const LoadingFallback = () => (
+  <div className="h-48 flex flex-col items-center justify-center gap-3 w-full bg-white/40 backdrop-blur-md border border-white/40 rounded-3xl py-12 max-w-xl mx-auto my-12 animate-pulse">
+    <div className="w-10 h-10 border-4 border-[#D4AF37]/30 border-t-[#D4AF37] rounded-full animate-spin" />
+    <span className="text-sm font-bold text-devotional-maroon tracking-wider">Loading Mithila Heritage...</span>
+  </div>
+);
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -25,16 +32,18 @@ export default function Home() {
         <QuickAccess />
         <DistrictOverview />
         
-        <Suspense fallback={<div className="h-40 flex items-center justify-center text-devotional-maroon">Loading...</div>}>
-          <TopPlaces />
-          <WhyVisit />
-          <Culture />
-          <History />
-          <MapSection />
-          <Blocks />
-          <Administration />
-          <DistrictDirectory />
-          <Emergency />
+        <Suspense fallback={<LoadingFallback />}>
+          <div className="lazy-section-container">
+            <TopPlaces />
+            <WhyVisit />
+            <Culture />
+            <History />
+            <MapSection />
+            <Blocks />
+            <Administration />
+            <DistrictDirectory />
+            <Emergency />
+          </div>
         </Suspense>
       </main>
       <Footer />

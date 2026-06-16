@@ -85,11 +85,18 @@ const services = [
 
 export default function QuickAccess() {
   return (
-    <section id="quick-access" className="py-12 bg-devotional-bg border-b border-devotional-gold/20">
+    <section id="quick-access" className="py-8 bg-devotional-bg relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-devotional-gold/60 after:to-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-devotional-maroon mb-2">Quick Access</h2>
-          <p className="text-devotional-text/75 text-sm">Instant links to important services and places in Sitamarhi</p>
+        <div className="text-center mb-12">
+          <span className="inline-block bg-amber-950/10 text-red-950 border-amber-900/20 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-devotional-gold/15 shadow-sm uppercase tracking-wider">
+            Useful Utilities
+          </span>
+          <h2 className="block w-fit mx-auto text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-950 via-red-950 to-amber-900 mb-6 drop-shadow-sm">
+            Quick Access
+          </h2>
+          <p className="text-devotional-text/80 max-w-2xl mx-auto text-base sm:text-lg">
+            Instant links to important services and public utility facilities in Sitamarhi
+          </p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
           {services.map((service, index) => {

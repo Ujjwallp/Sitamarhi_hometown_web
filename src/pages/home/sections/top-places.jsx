@@ -95,22 +95,26 @@ export default function TopPlaces() {
   const headerInView = useInView(headerRef, { once: true, margin: '-60px' });
 
   return (
-    <section id="places" className="py-16 bg-devotional-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="places" className="scroll-mt-20 py-16 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-devotional-gold/60 after:to-transparent">
+      <div
+        className="absolute inset-0 opacity-[0.025] pointer-events-none"
+        style={{ backgroundImage: 'radial-gradient(circle, #7a1f1f 1px, transparent 1px)', backgroundSize: '32px 32px' }}
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           ref={headerRef}
           initial={{ opacity: 0, y: 24 }}
           animate={headerInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="text-center mb-12"
+          className="text-center mb-14"
         >
-          <span className="inline-block bg-devotional-secondary text-devotional-maroon text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-devotional-gold/15 shadow-xs">
+          <span className="inline-block bg-amber-950/10 text-red-950 border-amber-900/20 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-devotional-gold/15 shadow-sm uppercase tracking-wider">
             Sacred Attractions
           </span>
-          <h2 className="font-serif text-4xl sm:text-5xl font-bold text-devotional-maroon mb-4">
+          <h2 className="block w-fit mx-auto text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-950 via-red-950 to-amber-900 mb-5 drop-shadow-sm">
             Places to Visit
           </h2>
-          <p className="text-devotional-text/80 max-w-2xl mx-auto text-base sm:text-lg">
+          <p className="text-slate-600 max-w-2xl mx-auto text-base sm:text-lg">
             Explore the sacred temples, pilgrimage sites and mythological landmarks that form the spiritual soul of Sita Janmabhoomi.
           </p>
         </motion.div>

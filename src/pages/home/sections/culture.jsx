@@ -12,7 +12,7 @@ export default function Culture() {
   const headerInView = useInView(headerRef, { once: true, margin: '-60px' });
 
   return (
-    <section id="culture" className="py-16 bg-devotional-bg">
+    <section id="culture" className="scroll-mt-20 py-12 bg-devotional-bg relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-devotional-gold/60 after:to-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={headerRef}
@@ -21,10 +21,10 @@ export default function Culture() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-center mb-12"
         >
-          <span className="inline-block bg-devotional-secondary text-devotional-maroon text-sm font-semibold px-4 py-1.5 rounded-full mb-4 shadow-sm border border-devotional-secondary">
+          <span className="inline-block bg-amber-950/10 text-red-950 border-amber-900/20 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 shadow-sm border border-devotional-secondary">
             Culture &amp; Heritage
           </span>
-          <h2 className="font-serif text-4xl sm:text-5xl font-bold text-devotional-maroon mb-4">The Soul of Mithila</h2>
+          <h2 className="block w-fit mx-auto text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-950 via-red-950 to-amber-900 mb-6 drop-shadow-sm">The Soul of Mithila</h2>
           <p className="text-devotional-text/80 max-w-2xl mx-auto text-base sm:text-lg">
             Discover the art forms, languages, festivals, and living traditions that have shaped the Mithila civilisation for millennia.
           </p>

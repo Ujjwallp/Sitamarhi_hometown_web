@@ -263,67 +263,73 @@ export default function MapSection() {
     : landmarks.filter((l) => l.category === activeCategory);
 
   return (
-    <section id="map" className="py-16 bg-devotional-bg">
+    <section id="map" className="scroll-mt-20 py-16 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-devotional-gold/60 after:to-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={headerRef}
           initial={{ opacity: 0, y: 24 }}
           animate={headerInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8"
+          className="text-center mb-10"
         >
-          <span className="inline-block bg-devotional-secondary text-devotional-maroon text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-devotional-gold/15 shadow-xs">
-            Interactive Map
+          <span className="inline-block bg-amber-950/10 text-red-950 border-amber-900/20 text-xs font-bold px-3.5 py-1 rounded-full mb-3 border border-devotional-gold/15 shadow-sm uppercase tracking-wider">
+            Interactive Map Guide
           </span>
-          <h2 className="font-serif text-4xl sm:text-5xl font-bold text-devotional-maroon mb-4">Explore on Map</h2>
-          <p className="text-devotional-text/80 max-w-2xl mx-auto text-base sm:text-lg">
-            Click any marker to discover details and get directions to landmarks across the district.
+          <h2 className="block w-fit mx-auto text-3xl md:text-4.5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-950 via-red-950 to-amber-900 mb-4 drop-shadow-sm">Explore on Map</h2>
+          <p className="text-slate-600 max-w-2xl mx-auto text-base sm:text-lg font-medium leading-relaxed">
+            Click any marker to discover details and get directions to key religious, administrative, and utility landmarks.
           </p>
         </motion.div>
+        
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={headerInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-wrap gap-2 justify-center mb-6"
+          className="flex flex-wrap gap-2 justify-center mb-8 bg-slate-50/50 p-2 rounded-2xl border border-slate-200/50 max-w-3xl mx-auto backdrop-blur-2xl"
         >
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200 ${
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 ${
                 activeCategory === cat
-                  ? 'bg-navy-950 text-white border-navy-950 shadow-md scale-105'
-                  : 'bg-white text-slate-600 border-slate-200 hover:border-navy-300 hover:text-navy-950'
+                  ? 'bg-devotional-maroon text-white border-devotional-maroon shadow-md scale-[1.02]'
+                  : 'bg-white/50 backdrop-blur-2xl text-slate-600 border border-slate-200/60 hover:border-devotional-maroon/30 hover:text-devotional-maroon hover:bg-white'
               }`}
             >
-              {CATEGORY_EMOJIS[cat]} {cat}
+              <span className="mr-1.5">{CATEGORY_EMOJIS[cat]}</span>
+              {cat}
             </button>
           ))}
         </motion.div>
-        <div className="premium-card p-2 sm:p-4 mb-6 relative z-10">
-          <div className="rounded-2xl overflow-hidden shadow-inner border border-devotional-gold/20 relative z-10">
-            <div ref={containerRef} style={{ height: '520px', width: '100%' }} />
+        
+        <div className="mb-8 relative z-10">
+          <div className="rounded-2xl p-1 bg-gradient-to-br from-devotional-gold/40 via-slate-200 to-devotional-maroon/30 shadow-xl shadow-slate-100/80 border border-slate-200/40">
+            <div className="rounded-xl overflow-hidden relative z-10 border border-white">
+              <div ref={containerRef} style={{ height: '520px', width: '100%' }} />
+            </div>
           </div>
         </div>
-        <div className="mt-6 flex flex-wrap gap-3 justify-center">
+        
+        <div className="mt-8 flex flex-wrap gap-2.5 justify-center max-w-5xl mx-auto">
           {visibleLandmarks.map((place) => (
             <a
               key={place.id}
               href={place.mapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white hover:bg-amber-50 border border-slate-200 hover:border-amber-300 text-navy-950 px-4 py-2 rounded-full text-sm font-medium transition-all shadow-sm"
+              className="inline-flex items-center gap-2 bg-white/50 hover:bg-white/70 backdrop-blur-2xl border border-slate-200/60 hover:border-devotional-gold/50 text-slate-700 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all shadow-sm hover:-translate-y-0.5"
             >
-              <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: CATEGORY_COLORS[place.category] }} />
+              <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: CATEGORY_COLORS[place.category] }} />
               {place.name}
-              <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-devotional-maroon" />
             </a>
           ))}
           <a
             href="https://www.google.com/maps/dir//Sitamarhi,+Bihar/@26.5886856,85.40354255,12z"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-navy-950 hover:bg-navy-800 text-white px-4 py-2 rounded-full text-sm font-semibold transition-colors shadow-md"
+            className="inline-flex items-center gap-2 bg-devotional-maroon hover:bg-devotional-maroon/90 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-all shadow-md hover:-translate-y-0.5 active:scale-95"
           >
             <Navigation className="w-3.5 h-3.5" />
             Get Directions to Sitamarhi
