@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { Lightbulb } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 
-import { cultureItems } from '@/data/culture';
+import { cultureItems } from '@/pages/home/sections/culture/cultureData';
 
 export default function Culture() {
   const headerRef = useRef(null);

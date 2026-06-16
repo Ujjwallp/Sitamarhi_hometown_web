@@ -1,6 +1,6 @@
-import amitRanjan from '@/assets/images/administration/amit-ranjan.png';
-import richiPandey from '@/assets/images/administration/richie-pandey.png';
-import deveshThakur from '@/assets/images/administration/devesh-thakur.webp';
+import amitRanjan from '@/pages/home/sections/administration/images/amit-ranjan.png';
+import richiPandey from '@/pages/home/sections/administration/images/richie-pandey.png';
+import deveshThakur from '@/pages/home/sections/administration/images/devesh-thakur.webp';
 
 export const officers = [
   {

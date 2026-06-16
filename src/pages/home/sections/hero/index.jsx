@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Info, Compass, Map } from 'lucide-react';
-import heroBg from '@/assets/images/hero/hero-bg.png';
+import heroBg from '@/pages/home/sections/hero/images/hero-bg.png';
 
 const stats = [
   { value: '34.2 Lakh', label: 'Population', icon: '👥' },

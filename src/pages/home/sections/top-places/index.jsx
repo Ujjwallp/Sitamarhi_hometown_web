@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import { MapPin, ExternalLink, ChevronRight, X, Clock, Navigation } from 'lucide-react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 
-import { places } from '@/data/places';
+import { places } from '@/pages/home/sections/top-places/placesData';
 
 function PlaceModal({ place, onClose }) {
   return (

@@ -1,7 +1,7 @@
-import janakiSthan from '@/assets/images/places/janaki-sthan.webp';
-import punauraDham from '@/assets/images/places/punaura-dham.jpg';
-import haleshwarSthan from '@/assets/images/places/haleshwar-sthan.jpg';
-import panthPakar from '@/assets/images/places/panth-pakar-real.jpg';
+import janakiSthan from '@/pages/home/sections/top-places/images/janaki-sthan.webp';
+import punauraDham from '@/pages/home/sections/top-places/images/punaura-dham.jpg';
+import haleshwarSthan from '@/pages/home/sections/top-places/images/haleshwar-sthan.jpg';
+import panthPakar from '@/pages/home/sections/top-places/images/panth-pakar-real.jpg';
 
 export const places = [
   {

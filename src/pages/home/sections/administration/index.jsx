@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Info, Phone, Mail, Globe, PhoneCall } from 'lucide-react';
-import { officers } from '@/data/administration';
+import { officers } from '@/pages/home/sections/administration/administrationData';
 
 function OfficerCard({ officer, index }) {
   const ref = useRef(null);

@@ -1,7 +1,7 @@
-import madhubaniArt from '@/assets/images/culture/madhubani-art.jpg';
-import chhathPuja from '@/assets/images/culture/chhath-puja.jpg';
-import mithilaPainting from '@/assets/images/culture/mithila-painting.jpg';
-import tirhutaScript from '@/assets/images/culture/tirhuta-script.jpg';
+import madhubaniArt from '@/pages/home/sections/culture/images/madhubani-art.jpg';
+import chhathPuja from '@/pages/home/sections/culture/images/chhath-puja.jpg';
+import mithilaPainting from '@/pages/home/sections/culture/images/mithila-painting.jpg';
+import tirhutaScript from '@/pages/home/sections/culture/images/tirhuta-script.jpg';
 
 export const cultureItems = [
   {
