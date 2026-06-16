@@ -1,4 +1,4 @@
-import CultureCard from '@/components/ui/culture-card';
+import CultureCard from './culture-card';
 import { useRef } from 'react';
 import { Lightbulb } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';

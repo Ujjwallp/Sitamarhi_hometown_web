@@ -1,4 +1,4 @@
-import PlaceCard from '@/components/ui/place-card';
+import PlaceCard from './place-card';
 import { useState, useRef } from 'react';
 import { MapPin, ExternalLink, ChevronRight, X, Clock, Navigation } from 'lucide-react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
