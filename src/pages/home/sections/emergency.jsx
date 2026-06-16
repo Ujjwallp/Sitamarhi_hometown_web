@@ -103,7 +103,7 @@ function ContactCard({ contact, index }) {
       className={`group relative rounded-2xl bg-white/50 hover:bg-white/70 backdrop-blur-2xl backdrop-blur-2xl border border-slate-200/60 border-l-4 ${contact.borderTheme} p-5 flex flex-col justify-between h-full transition-all duration-300 hover:shadow-lg hover:shadow-slate-100/80`}
     >
       <div className="flex flex-col flex-grow">
-        {/* Header */}
+        
         <div className="flex items-center gap-3.5 mb-4">
           <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${contact.iconTheme} transition-transform duration-300 group-hover:scale-105`}>
             <Icon className="w-5.5 h-5.5" />
@@ -118,7 +118,6 @@ function ContactCard({ contact, index }) {
           </div>
         </div>
 
-        {/* Number Box */}
         <div className="rounded-xl p-3 bg-slate-50/50 border border-slate-100 flex items-center justify-between mb-4">
           <div>
             <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-0.5">Toll-Free Helpline</p>
@@ -137,13 +136,11 @@ function ContactCard({ contact, index }) {
           </button>
         </div>
 
-        {/* Description */}
         <p className="text-slate-500 text-xs leading-relaxed mb-5 flex-grow">
           {contact.description}
         </p>
       </div>
 
-      {/* Call button */}
       <a
         href={`tel:${contact.number}`}
         className={`w-full inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold border transition-all ${contact.btnTheme}`}

@@ -5,7 +5,6 @@ import QuickAccess from '@/pages/home/sections/quick-access';
 import DistrictOverview from '@/pages/home/sections/district-overview';
 import Footer from '@/components/layout/footer';
 
-// Lazy loaded below-the-fold components
 const TopPlaces = lazy(() => import('@/pages/home/sections/top-places'));
 const WhyVisit = lazy(() => import('@/pages/home/sections/why-visit'));
 const Culture = lazy(() => import('@/pages/home/sections/culture'));

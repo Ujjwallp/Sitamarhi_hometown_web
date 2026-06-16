@@ -5,8 +5,6 @@ import { motion, useInView } from 'framer-motion';
 
 import { cultureItems } from '@/data/culture';
 
-
-
 export default function Culture() {
   const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { once: true, margin: '-60px' });

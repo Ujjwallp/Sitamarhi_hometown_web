@@ -22,7 +22,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-white/40 backdrop-blur-md text-devotional-text relative overflow-hidden border-t border-devotional-gold/30">
-      {/* Decorative background grid pattern */}
+      
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
@@ -30,8 +30,7 @@ export default function Footer() {
           backgroundSize: '28px 28px',
         }}
       />
-      
-      {/* Dynamic top gradient line */}
+
       <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-devotional-maroon to-transparent opacity-30" />
       
       <div
@@ -39,7 +38,7 @@ export default function Footer() {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-          {/* Column 1: Info */}
+          
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
               <img
@@ -63,7 +62,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Useful Links */}
           <div>
             <h4 className="font-extrabold text-xs uppercase tracking-widest text-devotional-maroon mb-6 flex items-center gap-2">
               <span className="w-3 h-[2px] bg-devotional-gold rounded-full" />
@@ -89,7 +87,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Official Sources */}
           <div>
             <h4 className="font-extrabold text-xs uppercase tracking-widest text-devotional-maroon mb-6 flex items-center gap-2">
               <span className="w-3 h-[2px] bg-devotional-gold rounded-full" />
@@ -105,7 +102,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Developer */}
           <div>
             <h4 className="font-extrabold text-xs uppercase tracking-widest text-devotional-maroon mb-6 flex items-center gap-2">
               <span className="w-3 h-[2px] bg-devotional-gold rounded-full" />
@@ -125,7 +121,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-devotional-gold/20 bg-white/50 relative z-10 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center gap-4">
           <p className="text-devotional-text/70 text-sm font-semibold">

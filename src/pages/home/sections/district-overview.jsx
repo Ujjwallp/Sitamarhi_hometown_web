@@ -72,16 +72,15 @@ function StatCard({ stat, index }) {
       transition={{ duration: 0.5, delay: index * 0.05, ease: 'easeOut' }}
       className={`group relative rounded-2xl bg-white/50 hover:bg-white/70 backdrop-blur-2xl backdrop-blur-2xl border border-slate-200/60 border-t-4 ${stat.theme} p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-slate-100/80 flex flex-col justify-between h-full`}
     >
-      {/* Decorative top right highlight */}
+      
       <div className="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-slate-50/50 blur-2xl group-hover:bg-slate-100/50 transition-all duration-500 pointer-events-none" />
 
       <div className="relative z-10 flex flex-col gap-4">
-        {/* Icon */}
+        
         <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${stat.iconTheme} transition-transform duration-300 group-hover:scale-105 shrink-0`}>
           <Icon className="w-5.5 h-5.5" />
         </div>
 
-        {/* Value */}
         <div>
           <p className="text-4xl font-black text-slate-800 tracking-tight leading-none">
             {stat.value}

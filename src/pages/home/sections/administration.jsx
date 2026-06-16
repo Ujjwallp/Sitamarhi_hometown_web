@@ -25,12 +25,11 @@ function OfficerCard({ officer, index }) {
         boxShadow: '0 20px 50px -12px rgba(122,31,31,0.12), inset 0 1px 0 rgba(255,255,255,0.6)',
       }}
     >
-      {/* Top gold accent */}
+      
       <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-devotional-maroon via-devotional-gold to-devotional-saffron" />
-      {/* Glow */}
+      
       <div className="absolute -top-12 -right-12 w-40 h-40 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-devotional-gold/10" />
 
-      {/* Photo header */}
       <div className="relative flex flex-col items-center pt-8 pb-6 px-6 border-b border-devotional-gold/15">
         <div className="relative mb-4">
           <div
@@ -46,7 +45,7 @@ function OfficerCard({ officer, index }) {
               loading="lazy"
             />
           </div>
-          {/* Gold ring */}
+          
           <div
             className="absolute -inset-1 rounded-full border-2 border-dashed border-devotional-gold/30 group-hover:border-devotional-gold/60 transition-colors duration-500"
             style={{ animation: 'spin 20s linear infinite' }}
@@ -68,9 +67,8 @@ function OfficerCard({ officer, index }) {
         </span>
       </div>
 
-      {/* Details */}
       <div className="p-6 flex-1 flex flex-col gap-4">
-        {/* Office */}
+        
         <div
           className="rounded-xl p-4"
           style={{ background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.15)' }}
@@ -79,7 +77,6 @@ function OfficerCard({ officer, index }) {
           <p className="text-sm font-semibold text-slate-800 leading-snug">{officer.office}</p>
         </div>
 
-        {/* Phone + Email */}
         <div className="grid grid-cols-2 gap-3">
           <div className="rounded-xl p-3" style={{ background: 'rgba(249,115,22,0.06)', border: '1px solid rgba(249,115,22,0.15)' }}>
             <p className="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-1.5">Phone</p>
@@ -109,12 +106,11 @@ function OfficerCard({ officer, index }) {
           </div>
         </div>
 
-        {/* Meta */}
         <div className="flex items-center justify-between text-[10px] text-slate-400 font-medium">
           <span>Source: <strong className="text-slate-500">{officer.source}</strong></span>
           <span>Updated: <strong className="text-slate-500">{officer.lastUpdated}</strong></span>
         </div>
-        {/* Action buttons */}
+        
         <div className="flex gap-2 mt-auto pt-2">
           {hasPhone ? (
             <a
@@ -189,7 +185,6 @@ export default function Administration() {
           </p>
         </motion.div>
 
-        {/* Info banner */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={headerInView ? { opacity: 1, y: 0 } : {}}

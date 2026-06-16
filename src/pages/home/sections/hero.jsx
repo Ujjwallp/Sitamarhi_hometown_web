@@ -15,7 +15,7 @@ export default function Hero() {
       id="home"
       className="relative h-[calc(100vh-56px)] sm:h-[calc(100vh-70px)] min-h-[600px] flex items-center overflow-hidden bg-[#1a0505]"
     >
-      {/* Immersive background image */}
+      
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -23,7 +23,7 @@ export default function Hero() {
           backgroundPosition: 'right center',
         }}
       />
-      {/* Sophisticated dual gradient mask for text legibility and image integration */}
+      
       <div
         className="absolute inset-0 bg-gradient-to-r from-[#2D0A0A] via-[#2D0A0A]/95 to-[#2D0A0A]/20 lg:to-transparent z-0"
       />
@@ -39,13 +39,12 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            {/* Elegant Floating Badge */}
+            
             <div className="inline-flex items-center gap-2 bg-[#FF9933]/15 border border-[#FF9933]/40 px-3.5 py-1 rounded-full text-[11px] font-bold text-devotional-saffron mb-4 tracking-widest max-w-max shadow-lg shadow-black/20 animate-pulse">
               <span className="w-1.5 h-1.5 rounded-full bg-devotional-saffron" />
               📍 MITHILA REGION • BIHAR, INDIA
             </div>
 
-            {/* Majestic Title */}
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.2rem] font-black tracking-tight mb-3 leading-[1.1]">
               <span className="text-white block drop-shadow-sm">Sitamarhi</span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF9933] via-devotional-gold to-[#FF9933] block mt-0.5 animate-shimmer">
@@ -56,19 +55,16 @@ export default function Hero() {
               </span>
             </h1>
 
-            {/* Sacred Lotus Separator */}
             <div className="flex items-center gap-3 my-2">
               <div className="h-[1px] bg-gradient-to-r from-devotional-gold/60 to-transparent w-20" />
               <span className="text-devotional-gold text-base select-none filter drop-shadow">🪷</span>
               <div className="h-[1px] bg-gradient-to-r from-devotional-gold/60 to-transparent w-20" />
             </div>
 
-            {/* Description */}
             <p className="text-amber-50/80 text-xs sm:text-sm mb-5 leading-relaxed max-w-lg font-medium filter drop-shadow">
               Welcome to Sitamarhi, the divine birthplace of Maa Sita and the spiritual heart of Mithila. Explore ancient temples, rich traditions, cultural heritage, and the legacy of King Janaka's kingdom.
             </p>
 
-            {/* Action Buttons */}
             <div className="flex flex-wrap gap-3 mb-6">
               <a
                 href="#places"
@@ -93,7 +89,6 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Royal Dark Glass Stats Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl border-t border-white/10 pt-4">
               {stats.map((stat) => (
                 <div

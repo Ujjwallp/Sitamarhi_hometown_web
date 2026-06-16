@@ -87,8 +87,6 @@ function PlaceModal({ place, onClose }) {
   );
 }
 
-
-
 export default function TopPlaces() {
   const [selectedPlace, setSelectedPlace] = useState(null);
   const headerRef = useRef(null);

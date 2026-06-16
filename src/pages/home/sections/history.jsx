@@ -97,7 +97,7 @@ function EraCard({ era, index }) {
 
   return (
     <div className="relative flex items-center w-full my-6">
-      {/* Timeline dot */}
+      
       <div
         className="absolute left-1/2 -translate-x-1/2 z-20 hidden md:flex items-center justify-center"
         style={{ filter: `drop-shadow(0 0 6px ${era.accentColor}50)` }}
@@ -108,13 +108,11 @@ function EraCard({ era, index }) {
         />
       </div>
 
-      {/* Connector line to card */}
       <div
         className={`hidden md:block absolute top-1/2 -translate-y-1/2 h-[1px] w-12 z-10 opacity-40 ${isLeft ? 'right-[calc(50%+8px)]' : 'left-[calc(50%+8px)]'}`}
         style={{ background: `linear-gradient(${isLeft ? 'to left' : 'to right'}, transparent, ${era.accentColor})` }}
       />
 
-      {/* Card side */}
       <motion.div
         ref={ref}
         initial={{ opacity: 0, x: isLeft ? -40 : 40, y: 20 }}
@@ -125,24 +123,22 @@ function EraCard({ era, index }) {
         <div
           className={`relative rounded-2xl bg-white/50 hover:bg-white/70 backdrop-blur-2xl backdrop-blur-2xl border border-slate-200/60 border-t-4 ${era.theme} p-6 overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-slate-100/80 flex flex-col justify-between h-full group`}
         >
-          {/* Decorative highlight */}
+          
           <div className="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-slate-50/50 blur-2xl group-hover:bg-slate-100/50 transition-all duration-500 pointer-events-none" />
 
           <div className="relative z-10">
-            {/* Header row */}
+            
             <div className="flex items-start justify-between mb-4 gap-3">
-              {/* Icon */}
+              
               <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${era.iconTheme} transition-transform duration-300 group-hover:scale-105 shrink-0`}>
                 <Icon className="w-5.5 h-5.5" />
               </div>
 
-              {/* Year badge */}
               <span className={`text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border ${era.tagTheme}`}>
                 {era.year}
               </span>
             </div>
 
-            {/* Text */}
             <p className={`text-[10px] font-extrabold uppercase tracking-wider mb-1 ${era.yearColor}`}>
               {era.subtitle}
             </p>
@@ -153,7 +149,6 @@ function EraCard({ era, index }) {
               {era.description}
             </p>
 
-            {/* Bottom accent bar */}
             <div className={`mt-4 h-[1.5px] w-10 rounded-full opacity-60 ${era.barTheme}`} />
           </div>
         </div>
@@ -177,7 +172,7 @@ export default function History() {
       />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section header */}
+        
         <motion.div
           ref={headerRef}
           initial={{ opacity: 0, y: 24 }}
@@ -196,9 +191,8 @@ export default function History() {
           </p>
         </motion.div>
 
-        {/* Timeline */}
         <div className="relative">
-          {/* Vertical spine */}
+          
           <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[1.5px] hidden md:block"
             style={{ background: 'linear-gradient(to bottom, transparent, #D4AF37 8%, #D4AF37 92%, transparent)' }}
           />

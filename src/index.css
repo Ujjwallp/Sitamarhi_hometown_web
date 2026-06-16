@@ -1,4 +1,4 @@
-/* Leaflet CSS — must be imported BEFORE Tailwind directives */
+
 @import 'leaflet/dist/leaflet.css';
 
 @tailwind base;
@@ -26,24 +26,21 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Force uniform font formatting across all text */
   h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, div, li, strong, b, i, em {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   }
 
-  /* Make standard CSS transitions smoother globally */
   * {
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Make sections transparent so the body gradient is visible */
   section, .bg-devotional-bg {
     background: transparent !important;
   }
 }
 
 :root {
-  /* ── Legacy Category Colors ─────────────────────────── */
+  
   --color-sacred-start: #fffbeb;
   --color-sacred-end: #fef3c7;
   --color-sacred-border: #fde68a;
@@ -69,69 +66,56 @@
   --color-services-border: #5eead4;
   --color-services-accent: #0f766e;
 
-  /* ── Section Card Tokens ─────────────────────────────── */
-
-  /* 1. Hero Stats — Gold / Amber */
   --card-hero-from: #fef9e7;
   --card-hero-to:   #fef3c7;
   --card-hero-border: #f5c842;
   --card-hero-accent: #b45309;
 
-  /* 2. District at a Glance — Blue / Indigo */
   --card-district-from: #eff6ff;
   --card-district-to:   #e0e7ff;
   --card-district-border: #a5b4fc;
   --card-district-accent: #3730a3;
 
-  /* 3. Sacred Attractions — Saffron / Deep Orange */
   --card-sacred-from: #fffbeb;
   --card-sacred-to:   #fef3c7;
   --card-sacred-border: #fde68a;
   --card-sacred-accent: #d97706;
 
-  /* 4. Why Visit — Purple / Violet */
   --card-why-from: #f5f3ff;
   --card-why-to:   #ede9fe;
   --card-why-border: #c4b5fd;
   --card-why-accent: #6d28d9;
 
-  /* 5. Culture & Heritage — Rose / Pink */
   --card-culture-from: #fff1f2;
   --card-culture-to:   #ffe4e6;
   --card-culture-border: #fda4af;
   --card-culture-accent: #be123c;
 
-  /* 6. Historical Legacy — Emerald / Green */
   --card-history-from: #f0fdf4;
   --card-history-to:   #dcfce7;
   --card-history-border: #86efac;
   --card-history-accent: #15803d;
 
-  /* 7. Interactive Map — Cyan / Teal */
   --card-map-from: #ecfeff;
   --card-map-to:   #cffafe;
   --card-map-border: #67e8f9;
   --card-map-accent: #0e7490;
 
-  /* 8. Administrative Divisions (Blocks) — Warm Stone / Sandstone */
   --card-blocks-from: #fafaf9;
   --card-blocks-to:   #f5f0eb;
   --card-blocks-border: #d6c9b8;
   --card-blocks-accent: #78350f;
 
-  /* 9. Governance — Navy / Deep Slate */
   --card-governance-from: #f0f4ff;
   --card-governance-to:   #dde6ff;
   --card-governance-border: #93c5fd;
   --card-governance-accent: #1e3a8a;
 
-  /* 10. District Directory — Teal / Cyan-Green */
   --card-directory-from: #f0fdfa;
   --card-directory-to:   #ccfbf1;
   --card-directory-border: #5eead4;
   --card-directory-accent: #0f766e;
 
-  /* 11. Emergency Helpline — Red / Rose */
   --card-emergency-from: #fff1f2;
   --card-emergency-to:   #ffe4e6;
   --card-emergency-border: #fca5a5;
@@ -139,17 +123,14 @@
 }
 
 @layer components {
-  /* Base premium card — shared shape, spacing, elevation */
+  
   .premium-card {
     @apply border rounded-2xl transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.012];
     background: #ffffff !important;
     border-color: rgba(212, 175, 55, 0.3) !important;
     box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 1) !important;
   }
-  
-  /* Retain hero stat card for the specific hero aesthetic */
 
-  /* Hero Translucent Glassmorphism Elements */
   .hero-stat-card {
     background: linear-gradient(135deg, rgba(184, 134, 11, 0.2) 0%, rgba(184, 134, 11, 0.05) 100%) !important;
     backdrop-filter: blur(12px) !important;
@@ -210,7 +191,6 @@
   }
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }

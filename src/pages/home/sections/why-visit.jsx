@@ -61,22 +61,19 @@ function ReasonCard({ reason, index }) {
       <div className="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-slate-50/50 blur-2xl group-hover:bg-slate-100/50 transition-all duration-500 pointer-events-none" />
 
       <div className="relative z-10 flex flex-col flex-1">
-        {/* Icon */}
+        
         <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${reason.iconTheme} mb-4 transition-transform duration-300 group-hover:scale-105 shrink-0`}>
           <Icon className="w-5.5 h-5.5" />
         </div>
 
-        {/* Title */}
         <h3 className="text-lg font-black text-slate-800 mb-2 leading-snug group-hover:text-devotional-maroon transition-colors">
           {reason.title}
         </h3>
 
-        {/* Description */}
         <p className="text-slate-500 text-xs leading-relaxed font-semibold flex-1 mb-5">
           {reason.description}
         </p>
 
-        {/* Stat badge */}
         <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg w-fit border ${reason.tagTheme}`}>
           <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
           <span className="text-[10px] font-extrabold tracking-wider uppercase">

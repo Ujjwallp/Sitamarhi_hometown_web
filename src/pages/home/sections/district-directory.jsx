@@ -67,7 +67,7 @@ function DirectoryCard({ entry, index }) {
       className={`group relative rounded-2xl bg-white/50 hover:bg-white/70 backdrop-blur-2xl backdrop-blur-2xl border border-slate-200/60 border-l-4 ${entry.borderTheme} p-5 flex flex-col justify-between h-full transition-all duration-300 hover:shadow-lg hover:shadow-slate-100/80`}
     >
       <div className="flex flex-col flex-grow">
-        {/* Header */}
+        
         <div className="flex items-start gap-3.5 mb-4">
           <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${entry.iconTheme} transition-transform duration-300 group-hover:scale-105 shrink-0`}>
             <Icon className="w-5.5 h-5.5" />
@@ -82,7 +82,6 @@ function DirectoryCard({ entry, index }) {
           </div>
         </div>
 
-        {/* Contact info list */}
         <div className="space-y-2.5 mb-5 flex-grow">
           <div className="flex items-center gap-2.5">
             <Phone className="w-3.5 h-3.5 text-slate-400 shrink-0" />
@@ -113,7 +112,6 @@ function DirectoryCard({ entry, index }) {
         </div>
       </div>
 
-      {/* Action buttons */}
       <div className="flex gap-2">
         {entry.phone ? (
           <a

@@ -22,10 +22,9 @@ export default function PlaceCard({ place, onLearnMore, index }) {
       }}
       onClick={() => onLearnMore(place)}
     >
-      {/* Top accent line */}
+      
       <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-devotional-maroon via-devotional-gold to-devotional-saffron z-10" />
 
-      {/* Image */}
       <div className="relative h-52 overflow-hidden">
         <img
           src={place.image}
@@ -33,17 +32,15 @@ export default function PlaceCard({ place, onLearnMore, index }) {
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        {/* Overlay */}
+        
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
-        {/* Tag */}
         <span
           className={`absolute top-3 left-3 ${place.tagColor} text-white text-[10px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full shadow-lg border border-white/20 z-10`}
         >
           {place.tag}
         </span>
 
-        {/* Name over image */}
         <div className="absolute bottom-3 left-4 right-4 z-10">
           <h3 className="text-xl font-black text-white drop-shadow-lg leading-tight group-hover:text-devotional-gold transition-colors duration-300">
             {place.name}
@@ -62,16 +59,14 @@ export default function PlaceCard({ place, onLearnMore, index }) {
         </div>
       </div>
 
-      {/* Body */}
       <div className="p-5 flex-1 flex flex-col relative">
-        {/* Subtle glow */}
+        
         <div className="absolute -top-10 -right-10 w-32 h-32 bg-devotional-gold/8 rounded-full blur-3xl pointer-events-none" />
 
         <p className="text-slate-700 text-sm leading-relaxed flex-1 mb-4 font-medium relative z-10">
           {place.shortDesc}
         </p>
 
-        {/* Fact */}
         <div
           className="rounded-xl p-3 mb-4 relative z-10"
           style={{ background: 'rgba(212,175,55,0.08)', border: '1px solid rgba(212,175,55,0.2)' }}
@@ -82,7 +77,6 @@ export default function PlaceCard({ place, onLearnMore, index }) {
           </p>
         </div>
 
-        {/* Actions */}
         <div className="flex gap-2 mt-auto relative z-10">
           <a
             href={place.mapUrl}
