@@ -1,9 +1,9 @@
 import { Suspense, lazy } from 'react';
-import Navbar from '@/components/layout/navbar';
+import Navbar from '@/layouts/navbar';
 import Hero from '@/pages/home/sections/hero';
 import QuickAccess from '@/pages/home/sections/quick-access';
 import DistrictOverview from '@/pages/home/sections/district-overview';
-import Footer from '@/components/layout/footer';
+import Footer from '@/layouts/footer';
 
 const TopPlaces = lazy(() => import('@/pages/home/sections/top-places'));
 const WhyVisit = lazy(() => import('@/pages/home/sections/why-visit'));
