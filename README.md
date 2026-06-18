@@ -7,7 +7,9 @@
 [![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=flat-square&logo=leaflet&logoColor=white)](https://leafletjs.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-A premium, highly-responsive web application showcasing the rich spiritual heritage, cultural legacy, and administration of **Sitamarhi**, the sacred birthplace of Goddess Sita.
+This is a simple web application I built to showcase my hometown, **Sitamarhi**, the sacred birthplace of Goddess Sita. It highlights the spiritual heritage, culture, and administration of the city. 
+
+I created this project to learn and practice building fully responsive websites using React, Tailwind CSS, and adding interactive maps with Leaflet.
 
 ---
 
