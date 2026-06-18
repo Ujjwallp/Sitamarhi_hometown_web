@@ -1,4 +1,4 @@
-# Sitamarhi Hometown
+# 🛕 Sitamarhi Hometown – Cultural Heritage Portal
 
 [![React](https://img.shields.io/badge/React-18-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev)
@@ -7,9 +7,7 @@
 [![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=flat-square&logo=leaflet&logoColor=white)](https://leafletjs.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-This is a simple web application I built to showcase my hometown, **Sitamarhi**, the sacred birthplace of Goddess Sita. It highlights the spiritual heritage, culture, and administration of the city. 
-
-I created this project to learn and practice building fully responsive websites using React, Tailwind CSS, and adding interactive maps with Leaflet.
+This is a web application I built to showcase my hometown, **Sitamarhi**, the sacred birthplace of Goddess Sita. It highlights the spiritual heritage, culture, and administration of the city. I created this project to learn and practice building fully responsive websites using React, Tailwind CSS, and adding interactive maps with Leaflet.
 
 ---
 
@@ -23,89 +21,61 @@ I created this project to learn and practice building fully responsive websites 
 
 ![Sitamarhi Web App Preview](docs/images/screenshot.png)
 
-## 🌟 Key Features
+---
 
-- **Spiritual & Premium Aesthetic**: A clean design featuring modern typography, warm gradients, and an immersive Mithila-themed user interface.
-- **Feature-Based Colocated Architecture**: Clean and modular folder organization where components, their exclusive data models, and specific media assets live together.
-- **Interactive Maps**: Fully responsive Leaflet-powered maps highlighting key historical and spiritual attractions.
-- **Smooth Animations**: Tailored micro-interactions and transitions using Framer Motion.
-- **Responsive Layout**: Pixel-perfect layout across desktop, tablet, and mobile devices built using Tailwind CSS.
+## ✨ Key Features
+
+* **Tourism portal:** Explore the history, heritage, and culture of Sitamarhi.
+* **Interactive maps:** View interactive maps highlighting key spiritual attractions and places to visit.
+* **District administration:** Access helpful information regarding the local administration.
+* **Responsive design:** A fully responsive layout that works perfectly on desktop, tablet, and mobile.
+* **Multi-section website:** Smooth navigation through different sections of the website.
+
+---
+
+## 🧠 What I Learned
+
+* Integrating third-party map libraries (React Leaflet) into a modern React application.
+* Building a highly responsive, pixel-perfect layout from scratch using Tailwind CSS.
+* Organizing components in a feature-based structure for better maintainability.
+* Adding smooth transitions and micro-interactions using Framer Motion.
+
+---
 
 ## 🛠 Tech Stack
 
-- **Frontend**: [React 18](https://react.dev/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Map Library**: [Leaflet](https://leafletjs.com/)
+* **React 18**
+* **Vite**
+* **Tailwind CSS**
+* **React Leaflet**
+* **Framer Motion**
+* **Lucide React**
 
-## 📁 Project Structure
+---
 
-The project follows a professional **Feature-Based Colocated Structure** where components are self-contained with their related assets and data:
+## 🚀 Installation & Local Setup
 
-```text
-Sitamarhi_hometown_web/
-├── docs/             # Technical documentation & assets
-│   ├── images/
-│   │   └── screenshot.png
-│   └── Architecture.md
-├── public/           # Static public assets (favicons, etc.)
-├── src/
-│   ├── assets/       # Global static assets
-│   │   ├── images/   # Global background images
-│   │   └── logos/    # Global logos (e.g., Sita temple logo)
-│   ├── components/   # Global layout components
-│   │   └── layout/   # Navbar & Footer layout elements
-│   ├── pages/        # Application Pages
-│   │   └── home/
-│   │       ├── home.jsx  # Page assembly file
-│   │       └── sections/ # Feature-based colocated sections
-│   │           ├── hero/
-│   │           │   ├── index.jsx  # Main component
-│   │           │   └── images/    # Specific hero backgrounds
-│   │           ├── top-places/
-│   │           │   ├── index.jsx
-│   │           │   ├── place-card.jsx  # Specific UI element
-│   │           │   ├── placesData.js   # Exclusive data file
-│   │           │   └── images/         # Place-specific images
-│   │           ├── culture/
-│   │           │   ├── index.jsx
-│   │           │   ├── culture-card.jsx
-│   │           │   ├── cultureData.js
-│   │           │   └── images/
-│   │           └── ... (administration, history, emergency sections, etc.)
-│   ├── App.jsx       # Root component
-│   ├── main.jsx      # App entry point
-│   └── index.css     # Global styles & Tailwind configuration
-├── tailwind.config.js
-└── vite.config.js
+### 1. Prerequisites
+- Node.js 20+
+- npm or yarn
+
+### 2. Clone & Install Dependencies
+
+```bash
+git clone https://github.com/Ujjwallp/Sitamarhi_hometown_web.git
+cd Sitamarhi_hometown_web
+npm install
 ```
 
-## 💻 Installation & Development
+### 3. Run Development Server
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Ujjwallp/Sitamarhi_hometown_web.git
-   cd Sitamarhi_hometown_web
-   ```
+```bash
+npm run dev
+```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+---
 
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
+## 👨‍💻 Author
 
-4. **Production Build:**
-   ```bash
-   npm run build
-   ```
-   The production-ready assets will be generated in the `dist` directory and can be deployed to Vercel, Netlify, or GitHub Pages.
-
-## 📄 License
-
-This project is licensed under the MIT License.
+**Ujjwal Prakash**
+* **GitHub:** [https://github.com/Ujjwallp](https://github.com/Ujjwallp)
