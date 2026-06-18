@@ -1,50 +1,73 @@
 # Sitamarhi Hometown
 
-A modern, responsive web application showcasing the heritage, culture, and administration of Sitamarhi district. Built with React and Vite, featuring interactive maps and dynamic UI components.
+A premium, highly-responsive web application showcasing the rich spiritual heritage, cultural legacy, and administration of **Sitamarhi**, the sacred birthplace of Goddess Sita.
 
-## 🚀 Features
+![Sitamarhi Web App Preview](docs/images/screenshot.png)
 
-- **Interactive Maps**: Integrated with Leaflet for visualizing key locations across Sitamarhi.
-- **Dynamic User Interface**: Smooth animations powered by Framer Motion.
-- **Modern Design**: Styled cleanly with Tailwind CSS for a fully responsive experience across all devices.
-- **Comprehensive Sections**: Covers history, culture, administration, and emergency contacts.
+## 🌟 Key Features
+
+- **Spiritual & Premium Aesthetic**: A clean design featuring modern typography, warm gradients, and an immersive Mithila-themed user interface.
+- **Feature-Based Colocated Architecture**: Clean and modular folder organization where components, their exclusive data models, and specific media assets live together.
+- **Interactive Maps**: Fully responsive Leaflet-powered maps highlighting key historical and spiritual attractions.
+- **Smooth Animations**: Tailored micro-interactions and transitions using Framer Motion.
+- **Responsive Layout**: Pixel-perfect layout across desktop, tablet, and mobile devices built using Tailwind CSS.
 
 ## 🛠 Tech Stack
 
-- **Frontend Framework**: [React 18](https://react.dev/)
+- **Frontend**: [React 18](https://react.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Routing/State**: React Hooks
-- **Maps**: [React Leaflet](https://react-leaflet.js.org/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **Icons**: [Lucide React](https://lucide.dev/)
+- **Map Library**: [Leaflet](https://leafletjs.com/)
 
 ## 📁 Project Structure
 
+The project follows a professional **Feature-Based Colocated Structure** where components are self-contained with their related assets and data:
+
 ```text
 Sitamarhi_hometown_web/
+├── docs/             # Technical documentation & assets
+│   ├── images/
+│   │   └── screenshot.png
+│   └── Architecture.md
+├── public/           # Static public assets (favicons, etc.)
 ├── src/
-│   ├── assets/       # Static assets (images, icons, logos)
-│   ├── components/   # React components
-│   │   ├── cards/    # Reusable card components
-│   │   ├── layout/   # Global layout components (Navbar, Footer)
-│   │   ├── map/      # Map-specific components
-│   │   └── sections/ # Page sections
-│   ├── data/         # Static data files (JSON/JS objects)
+│   ├── assets/       # Global static assets
+│   │   ├── images/   # Global background images
+│   │   └── logos/    # Global logos (e.g., Sita temple logo)
+│   ├── components/   # Global layout components
+│   │   └── layout/   # Navbar & Footer layout elements
+│   ├── pages/        # Application Pages
+│   │   └── home/
+│   │       ├── home.jsx  # Page assembly file
+│   │       └── sections/ # Feature-based colocated sections
+│   │           ├── hero/
+│   │           │   ├── index.jsx  # Main component
+│   │           │   └── images/    # Specific hero backgrounds
+│   │           ├── top-places/
+│   │           │   ├── index.jsx
+│   │           │   ├── place-card.jsx  # Specific UI element
+│   │           │   ├── placesData.js   # Exclusive data file
+│   │           │   └── images/         # Place-specific images
+│   │           ├── culture/
+│   │           │   ├── index.jsx
+│   │           │   ├── culture-card.jsx
+│   │           │   ├── cultureData.js
+│   │           │   └── images/
+│   │           └── ... (administration, history, emergency sections, etc.)
 │   ├── App.jsx       # Root component
-│   ├── main.jsx      # Entry point
-│   └── index.css     # Global styles & Tailwind directives
-├── docs/             # Technical documentation
-├── public/           # Public assets
-├── .env.example      # Environment variables template
-└── vite.config.js    # Vite configuration
+│   ├── main.jsx      # App entry point
+│   └── index.css     # Global styles & Tailwind configuration
+├── tailwind.config.js
+└── vite.config.js
 ```
 
 ## 💻 Installation & Development
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/Sitamarhi_hometown_web.git
+   git clone https://github.com/Ujjwallp/Sitamarhi_hometown_web.git
    cd Sitamarhi_hometown_web
    ```
 
@@ -53,39 +76,16 @@ Sitamarhi_hometown_web/
    npm install
    ```
 
-3. **Set up environment variables:**
-   Copy the example environment file and fill in your values.
-   ```bash
-   cp .env.example .env
-   ```
-
-4. **Start the development server:**
+3. **Start the development server:**
    ```bash
    npm run dev
    ```
 
-## 🏗 Build & Deployment
-
-To build the project for production:
-
-```bash
-npm run build
-```
-
-This will generate a `dist` folder containing the optimized production build. You can preview the build locally using:
-
-```bash
-npm run preview
-```
-
-The output in the `dist` directory can be deployed to any static hosting service like Vercel, Netlify, or GitHub Pages.
-
-## 🔮 Future Improvements
-
-- Add robust global state management (e.g., Redux or Zustand) if the application scales.
-- Implement server-side rendering (SSR) for better SEO capabilities using Next.js.
-- Add internationalization (i18n) support for Hindi and English.
-- Enhance accessibility (a11y) to comply with WCAG standards.
+4. **Production Build:**
+   ```bash
+   npm run build
+   ```
+   The production-ready assets will be generated in the `dist` directory and can be deployed to Vercel, Netlify, or GitHub Pages.
 
 ## 📄 License
 
