@@ -1,5 +1,12 @@
 # Sitamarhi Hometown
 
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite)](https://vite.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer)](https://www.framer.com/motion/)
+[![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=flat-square&logo=leaflet)](https://leafletjs.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
 A premium, highly-responsive web application showcasing the rich spiritual heritage, cultural legacy, and administration of **Sitamarhi**, the sacred birthplace of Goddess Sita.
 
 ![Sitamarhi Web App Preview](docs/images/screenshot.png)
