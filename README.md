@@ -17,6 +17,8 @@ A premium, highly-responsive web application showcasing the rich spiritual herit
 
 ---
 
+## 📸 Interactive System Tour
+
 ![Sitamarhi Web App Preview](docs/images/screenshot.png)
 
 ## 🌟 Key Features
