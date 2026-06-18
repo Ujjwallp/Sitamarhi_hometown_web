@@ -9,6 +9,8 @@
 
 A premium, highly-responsive web application showcasing the rich spiritual heritage, cultural legacy, and administration of **Sitamarhi**, the sacred birthplace of Goddess Sita.
 
+🔗 **Live Preview:** [https://sitamarhi-hometown-web.vercel.app/](https://sitamarhi-hometown-web.vercel.app/)
+
 ![Sitamarhi Web App Preview](docs/images/screenshot.png)
 
 ## 🌟 Key Features
