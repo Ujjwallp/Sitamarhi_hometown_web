@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { MapPin, Clock, Navigation, ChevronRight, ExternalLink } from 'lucide-react';
+import { MapPin, Clock, Navigation } from 'lucide-react';
 
 export default function PlaceCard({ place, onLearnMore, index }) {
   const ref = useRef(null);
@@ -83,18 +83,11 @@ export default function PlaceCard({ place, onLearnMore, index }) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold transition-all border border-slate-200/60 bg-white/60 hover:bg-white text-slate-700 shadow-sm hover:shadow-md"
+            className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold transition-all border border-slate-200/60 bg-white/60 hover:bg-white text-slate-700 shadow-sm hover:shadow-md"
           >
             <Navigation className="w-3.5 h-3.5 text-slate-500" />
             Navigate
           </a>
-          <button
-            onClick={(e) => { e.stopPropagation(); onLearnMore(place); }}
-            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-devotional-maroon to-[#5a1515] hover:from-[#5a1515] hover:to-[#4a0f0f] text-white px-4 py-2.5 rounded-xl text-xs font-bold transition-all shadow-md shadow-devotional-maroon/20 hover:shadow-lg hover:shadow-devotional-maroon/40 hover:-translate-y-0.5"
-          >
-            Explore More
-            <ChevronRight className="w-3.5 h-3.5" />
-          </button>
         </div>
       </div>
     </motion.div>
